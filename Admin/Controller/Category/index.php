@@ -1,0 +1,61 @@
+<?php 
+	include("Admin/Model/DanhMucModel.php");
+
+	$danhMucModel = new DanhMucModel;
+
+	if(isset($_GET['action']))
+		$action = $_GET['action'];
+	else
+		$action = '';
+
+	switch ($action) 
+	{
+		case 'add':
+		{
+			if(isset($_POST['btnThem']))
+			{
+				$tenDanhMuc = $_POST['txtTenDanhMuc'];
+				$ketQua = $danhMucModel->Them($tenDanhMuc);
+				if($ketQua)
+					echo '<script>alert("Thêm thành công."); location.href="admin.php?controller=category";</script>';
+				else
+					echo "<script>alert('Thêm thất bại!');</script>";
+			}
+			require_once('Admin/View/Category/add.php');
+			break;
+		}
+		case 'edit':
+		{
+			$id = $_GET['id'];
+			$danhMuc = $danhMucModel->TimKiemTheoMa($id);
+			if(isset($_POST['btnSua']))
+			{
+				$tenDanhMuc = $_POST['txtTenDanhMuc'];
+				$ketQua = $danhMucModel->Sua($id, $tenDanhMuc);
+				if($ketQua)
+					echo '<script>alert("Sửa thành công."); location.href="admin.php?controller=category";</script>';
+				else
+					echo "<script>alert('Sửa thất bại!');</script>";
+			}
+			require_once('Admin/View/Category/edit.php');
+			break;
+		}
+		case 'delete':
+		{
+			$id = $_GET['id'];
+			$ketQua = $danhMucModel->Xoa($id);
+			if($ketQua)
+				echo '<script>alert("Xóa bản ghi thành công!"); location.href="admin.php?controller=category";</script>';
+			else
+				echo '<script>alert("Không thể xóa bản ghi! Đã tồn tại trong sản phẩm!"); location.href="admin.php?controller=category";</script>';
+		}
+		default:
+		{
+			$listDanhMuc = $danhMucModel->LayDanhSach();
+			require_once('Admin/View/Category/index.php');
+			break;
+		}
+	}
+?>
+
+
