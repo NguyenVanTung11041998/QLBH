@@ -17,10 +17,10 @@
 	<!-- /#wrapper -->
 	<!-- jQuery -->
 	<script src="Public/admin/js/jquery.js"></script>
+	<!-- <script type="text/javascript" src="Public/js/jquery.min.js"></script> -->
+	<script type="text/javascript" src="Public/admin/js/jquery-3.2.1.min.js"></script>
 	<!-- Bootstrap Core JavaScript -->
 	<script src="Public/admin/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="Public/js/jquery.min.js"></script>
-
 	<script type="text/javascript">
 		function confirmAction() {
 	        return confirm("Bạn có muốn xóa bản ghi này?");
@@ -110,13 +110,13 @@
 							<a href="admin.php?controller=supplier"><i class="fa fa-fw fa-dashboard"></i> Nhà cung cấp</a>
 						</li>
 						<li>
-							<a href="admin.php?controller=category"><i class="fa fa-list"></i> Loại sản phẩm</a>
+							<a href="admin.php?controller=category-product"><i class="fa fa-list"></i> Loại sản phẩm</a>
 						</li>
 						<li>
 							<a href="admin.php?controller=product"><i class="fa fa-database"></i> Sản phẩm</a> 
 						</li>
 						<li>
-							<a href="#"><i class="fa fa-database"></i> Thành viên</a>
+							<a href="admin.php?controller=customer"><i class="fa fa-database"></i> Khách hàng</a>
 						</li>
 						<li>
 							<a href="admin.php?controller=bill"><i class="fa fa-database"></i> Quản lý đơn hàng</a>
@@ -131,7 +131,7 @@
 							<a href="#"><i class="fa fa-fw fa-desktop"></i> Quản lý nhập xuất</a>
 						</li>
 						<li>
-							<a href="#"><i class="fa fa-fw fa-wrench"></i> Quản lý danh mục</a>
+							<a href="admin.php?controller=category"><i class="fa fa-fw fa-wrench"></i> Quản lý danh mục</a>
 						</li>
 					</ul>
 				</div>

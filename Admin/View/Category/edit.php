@@ -27,7 +27,7 @@
             <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Mã danh mục</label>
                 <div class="col-sm-8">
-                    <input type="text" class="form-control" id="" name="txtMaDanhMuc" value="<?php echo $loaiSanPham->GetMaDanhMuc();?>" readonly="true"> 
+                    <input type="text" class="form-control" id="" name="txtMaDanhMuc" value="<?php echo $danhMuc->GetMaDanhMuc();?>" readonly="true"> 
                 </div>
             </div>
 

@@ -54,7 +54,7 @@
 			else
 				echo '<script>alert("Không thể xóa bản ghi! Đã tồn tại trong sản phẩm!"); location.href="admin.php?controller=supplier";</script>';
 		}
-
+		
 		default:
 		{
 			$listNhaCungCap = $nhaCungCapModel->LayDanhSach();

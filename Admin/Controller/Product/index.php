@@ -27,7 +27,7 @@
 				$donGia = (float)$_POST['txtDonGia'];
 				$moTa = $_POST['txtMoTa'];
 				$hinhAnh = "Upload/".$_FILES['txtHinhAnh']['name'];
-				$soLuongTon = (int)$_POST['txtSoLuongTon'];
+				$soLuongTon = 0;
 				$moi = 0;
 
 				if(!empty(isset($_POST['ckbMoi'])))

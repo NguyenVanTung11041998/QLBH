@@ -36,13 +36,14 @@
 						foreach ($listDanhMuc as $key => $value) 
 						{ 
 						?>
-							<tr>
+							<tr id="row_<?php echo $value->GetMaDanhMuc();?>">
 								<td><?php echo $i; ?></td>
 								<td><?php echo $value->GetMaDanhMuc(); ?></td>
 								<td><?php echo $value->GetTenDanhMuc(); ?></td>
 								<td>
 									<a href="admin.php?controller=category&action=edit&id=<?php echo $value->GetMaDanhMuc();?>" class="btn btn-success"><i class="fa fa-edit"></i>Sửa</a>
-									<a href="admin.php?controller=category&action=delete&id=<?php echo $value->GetMaDanhMuc();?>" class="btn btn-danger" onClick="return confirmAction()"><i class="fa fa-times"></i>Xóa</a>
+									<!-- <a href="admin.php?controller=category&action=delete&id=<?php echo $value->GetMaDanhMuc();?>" class="btn btn-danger" onClick="return confirmAction()"><i class="fa fa-times"></i>Xóa</a> -->
+									<a href="#" class="delete btn btn-danger" data-id="<?php echo $value->GetMaDanhMuc();?>"><i class="fa fa-times"></i>Xóa</a>
 								</td>
 							</tr>
 						<?php
@@ -74,6 +75,32 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	$('.delete').click(function(e) {
+		e.preventDefault();
+		if(confirm("Bạn có muốn xóa bản ghi này không?"))
+		{
+			var x = $(this);
+			var id = x.data('id');
+			$.ajax({
+				url:'Admin/Controller/Category/delete.php',
+				method:'Post',
+				data:{id:id},
+				success:function(id) {
+					if(id != "")
+					{
+						var rowDelete = x.parent().parent();
+						rowDelete.remove();
+						alert("Xóa bản ghi thành công!");
+					}
+					else
+						alert("Không thể xóa bản ghi! Vì đã tồn tại trong loại sản phẩm!");
+				}
+			});
+		}
+	});
+</script>
 
 <!-- /.row -->
 <?php include("Admin/View/Layout/adfooter.php"); ?>

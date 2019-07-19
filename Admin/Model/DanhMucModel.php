@@ -36,7 +36,7 @@
 
 		public function Them($tenDanhMuc)
 		{
-			$query = "Insert into DanhMuc (TenDanhMuc) values ('$tenDanhMuc)";
+			$query = "Insert into DanhMuc (TenDanhMuc) values ('$tenDanhMuc')";
 			$ketQua = $this->dbConfig->ExecuteQuery($query);
 			return $ketQua;
 		}

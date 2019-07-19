@@ -13,9 +13,9 @@
 		<div class="form-group row">
 			<form action="" method="GET">
 				<div class="col-sm-4">
-                    <input type="text" class="form-control" placeholder="Search" name="search" /> 
+                    <input type="text" id="search_text" class="form-control" placeholder="Search" name="search" /> 
                 </div>
-                <button type="submit" name="btnSearch" class="btn btn-primary">Search</button>
+                <button type="button" id="search" class="btn btn-primary">Search</button>
 			</form>
 		</div>
 		<div class="clearfix"></div>
@@ -24,14 +24,14 @@
 				<i class="fa fa-dashboard"></i>  <a href="admin.php?controller=supplier">Dashboard</a>
 			</li>
 			<li class="active">
-				<i class="fa fa-file"></i> Nhà cung cấp
+				<i class="fa fa-file"></i> Nhà			 cung cấp
 			</li>
 		</ol>
 		<div class="clearfix"></div>
 	</div>
 </div>
 <div class="row">
-	<div class="col-lg-12">
+	<div class="col-lg-12" id="table_data">
 		<div class="table-responsive">
 			<table class="table table-bordered table-hover">
 				<thead>
@@ -91,5 +91,26 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	function LoadData(query){
+		$.ajax({
+		    url:"Admin/Controller/Supplier/fetch.php",
+		    method:"POST",
+		    data:{query:query},
+		    success:function(data) {
+		    	$('#table_data').html(data);
+		   }
+		});
+	}
+
+	$('#search').click(function() {
+	    var search = $('#search_text').val();
+	    if(search != '')
+	    	LoadData(search);
+	    else
+	    	LoadData();
+	});
+</script>
 
 <?php include("Admin/View/Layout/adfooter.php"); ?>

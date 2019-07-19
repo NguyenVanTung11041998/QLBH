@@ -6,14 +6,13 @@
 		<h1 class="page-header">
 			Danh sách hóa đơn
 			<!-- <small>Subheading</small> -->
-			<a href="add.php" class="btn btn-success">Thêm mới</a>
 		</h1>
 		<ol class="breadcrumb">
 			<li>
-				<i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+				<i class="fa fa-dashboard"></i>  <a href="admin.php?controller=bill">Dashboard</a>
 			</li>
 			<li class="active">
-				<i class="fa fa-file"></i> Sản phẩm<!--  -->
+				<i class="fa fa-file"></i> Hóa đơn<!--  -->
 			</li>
 		</ol>
 		<div class="clearfix"></div>
@@ -26,13 +25,11 @@
 				<thead>
 					<tr>
 						<th>STT</th>
-						<th>Name</th>
-						<th>Category</th>
-						<th>Sulg</th>
-						<th>Info</th>
-						<th>Thumbar</th>
-						<th>Content</th>
-						<th>Action</th>
+						<th>Mã hóa đơn</th>
+						<th>Ngày lập</th>
+						<th>Tên khách hàng</th>
+						<th>Trạng thái</th>
+						<th>Chi tiết hóa đơn</th>
 					</tr>
 				</thead>
 				<tbody>
@@ -87,4 +84,4 @@
 </div>
 
 <!-- /.row -->
-<?php require_once("Public/template/adfooter.php");?>
+<?php require_once("Admin/View/Layout/adfooter.php");?>

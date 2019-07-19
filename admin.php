@@ -47,9 +47,19 @@
 			require_once('Admin/Controller/BillInfo/index.php');
 			break;
 		}
-		case 'member':
+		case 'customer':
 		{
-			require_once('Admin/Controller/Member/index.php');
+			require_once('Admin/Controller/Customer/index.php');
+			break;
+		}
+		case 'import-coupon':
+		{
+			require_once('Admin/Controller/ImportCoupon/index.php');
+			break;
+		}
+		case 'coupon-info':
+		{
+			require_once('Admin/Controller/CouponInfo/index.php');
 			break;
 		}
 		default:
