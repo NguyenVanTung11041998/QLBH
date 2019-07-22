@@ -6,6 +6,7 @@
 		<h1 class="page-header">
 			Danh sách phiếu nhập
 			<!-- <small>Subheading</small> -->
+			<a href="admin.php?controller=import-coupon&action=add" class="btn btn-success">Thêm mới</a>
 		</h1>
 		<ol class="breadcrumb">
 			<li>

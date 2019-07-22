@@ -13,7 +13,7 @@
 	<link href="Public/admin/css/sb-admin.css" rel="stylesheet">
 	<!-- Custom Fonts -->
 	<link href="Public/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
+	<link rel="stylesheet" type="text/css" href="Public/css/style.css">
 	<!-- /#wrapper -->
 	<!-- jQuery -->
 	<script src="Public/admin/js/jquery.js"></script>
@@ -21,6 +21,7 @@
 	<script type="text/javascript" src="Public/admin/js/jquery-3.2.1.min.js"></script>
 	<!-- Bootstrap Core JavaScript -->
 	<script src="Public/admin/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="Public/vendor/chart.js"></script>
 	<script type="text/javascript">
 		function confirmAction() {
 	        return confirm("Bạn có muốn xóa bản ghi này?");

@@ -32,5 +32,11 @@
 			}
 			return NULL;
 		}
+
+		public function Them($ngayLap)
+		{
+			$query = "Insert into PhieuNhap (NgayLap, TongTienNhap) values ('NgayLap', 0)";
+			$ketQua = $dbConfig->ExecuteQuery($query);
+		}
 	}
 ?>
