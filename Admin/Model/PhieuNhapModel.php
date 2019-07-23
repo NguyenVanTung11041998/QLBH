@@ -15,7 +15,7 @@
 			$listPhieuNhap = array();
 			while ($row = mysqli_fetch_row($bangDuLieu)) 
 			{
-				$phieuNhap = new PhieuNhap($row['0'], $row['1']);
+				$phieuNhap = new PhieuNhap($row['0'], $row['1'], $row['2']);
 				$listPhieuNhap[] = $phieuNhap;
 			}
 			return $listPhieuNhap;
@@ -27,7 +27,7 @@
 			$bangDuLieu = $this->dbConfig->ExecuteQuery($query);
 			while ($row = mysqli_fetch_row($bangDuLieu)) 
 			{
-				$phieuNhap = new PhieuNhap($row['0'], $row['1']);
+				$phieuNhap = new PhieuNhap($row['0'], $row['1'], $row['2']);
 				return $phieuNhap;
 			}
 			return NULL;
@@ -39,7 +39,7 @@
 			$bangDuLieu = $this->dbConfig->ExecuteQuery($query);
 			while ($row = mysqli_fetch_row($bangDuLieu)) 
 			{
-				$phieuNhap = new PhieuNhap($row['0'], $row['1']);
+				$phieuNhap = new PhieuNhap($row['0'], $row['1'], $row['2']);
 				return $phieuNhap;
 			}
 			return NULL;

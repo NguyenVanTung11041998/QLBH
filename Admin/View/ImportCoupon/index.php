@@ -28,6 +28,7 @@
 						<th>STT</th>
 						<th>Mã phiếu nhập</th>
 						<th>Ngày lập</th>
+						<th>Tổng tiền nhập</th>
 						<th>Chi tiết phiếu nhập</th>
 					</tr>
 				</thead>
@@ -41,6 +42,7 @@
 								<td><?php echo $i; ?></td>
 								<td><?php echo $value->GetMaPN(); ?></td>
 								<td><?php echo $value->GetNgayLap(); ?></td>
+								<td><?php echo $value->GetTongTienNhap();?> VND</td>
 								<td>
 									<a href="admin.php?controller=coupon-info&id=<?php echo $value->GetMaPN();?>" class="btn btn-success"><i class="fa fa-edit"></i>Xem chi tiết hóa đơn</a>
 								</td>
