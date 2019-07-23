@@ -129,7 +129,7 @@
 							<a href="admin.php?controller=producer"><i class="fa fa-fw fa-edit"></i> Nhà sản xuất</a>
 						</li>
 						<li>
-							<a href="#"><i class="fa fa-fw fa-desktop"></i> Quản lý nhập xuất</a>
+							<a href="admin.php?controller=import-coupon"><i class="fa fa-fw fa-desktop"></i> Quản lý nhập xuất</a>
 						</li>
 						<li>
 							<a href="admin.php?controller=category"><i class="fa fa-fw fa-wrench"></i> Quản lý danh mục</a>

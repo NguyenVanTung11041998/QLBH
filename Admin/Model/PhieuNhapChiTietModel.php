@@ -33,5 +33,12 @@
 			}
 			return $listPhieuNhapChiTiet;
 		}
+
+		public function Them($maPN, $maSP, $soLuongNhap, $donGiaNhap)
+		{
+			$query = "INSERT INTO phieunhapchitiet (MaPN, MaSP, SoLuongNhap, DonGiaNhap) VALUES ($maPN, $maSP, $soLuongNhap, $donGiaNhap)";
+			$ketQua = $this->dbConfig->ExecuteQuery($query);
+			return $ketQua;
+		}
 	}
 ?>
