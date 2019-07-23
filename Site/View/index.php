@@ -3,6 +3,8 @@
 <head>
 	<title>New Store A Ecommerce Category Flat Bootstarp Resposive Website Template | Home :: w3layouts</title>
 	<link href="Public/site/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+	<link rel="stylesheet" type="text/css" href="Public/site/css/font-awesome.min.css">
+
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="Public/site/js/jquery.min.js"></script>
 	<!-- Custom Theme files -->

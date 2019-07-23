@@ -824,14 +824,14 @@ p.m_11 {
 }
 /*----*/
 h3.cate {
-	color: #000;
-	  border-bottom: 1px solid #000;
-  width: 69%;
-	font-size: 2em;
+	background: #EF5F21;
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+    text-transform: uppercase;
     font-family: 'Lato', sans-serif;
 }
 .of-left{
-	 border-bottom: 1px solid #000;
 }
 .product-go {
   margin-top: 2em;
@@ -863,34 +863,53 @@ ul.kid-menu{
 	height: auto;
 	padding: 0;
 	list-style: none;
-	margin: 1.5em 0;	
+	margin-bottom: 10px;
+    border: 1px solid #e3e3e3;
+}
+.menu > li{
+	border-bottom: 1px solid #e3e3e3;
+	width: 254px;
+}
+.menu > li:last-child{
+	border: none;
 }
 .menu > li > a {
 	width: 100%;
-  margin: 0.3em 0;
 	display:inline-block;
 	position: relative;
 	color: #000;
 	font-size: 1.1em;
 	text-decoration:none;
+	padding: 10px 25px;
 	
 }
-.menu > li > a:hover{
+.menu > li:hover > a{
+	background: #e3e3e3;
 	color:#EF5F21;
+} 
+
+.menu > li > a:hover{
+	
+	
 }
-.menu ul li a {	
+.menu ul li{
+	margin-left: 25px;
+	
+}
+.menu ul li a {
 	width: 100%;
-	display: inline-block;
+	display:inline-block;
 	position: relative;
-	font-size:1.1em;
-	margin:0.3em 0;
 	color: #000;
+	font-size: 1.1em;
 	text-decoration:none;
+	padding: 10px 25px 10px 0;
 	
 	text-indent: 1.2em;
 }
-.menu ul li a:hover{
+.menu ul li:hover > a{
 	color:#EF5F21;
+	background: #e3e3e3;
 }
 ul.kid-menu li,.menu ul li{
 	list-style: none;	
@@ -2377,4 +2396,13 @@ a.item_add p.number {
 }
 p.text-danger {
     margin-bottom: 5px;
+}
+.thumbar{
+	width: 255px;
+	height: 260px;
+}
+.fa-list{
+	font-size: 20px;
+	padding: 10px;
+	padding-right: 5px;
 }

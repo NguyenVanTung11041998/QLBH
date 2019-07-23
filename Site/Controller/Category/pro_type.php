@@ -8,5 +8,8 @@
         $data[$item['TenDanhMuc']] = $list_loaisp;
     }
     //_debug($loaisp);
+    $maLoaiSP = getInput('id');
+    $products = $cate->get_products_DM($maLoaiSP);
+    //_debug($products);
     $view = $controller.'/'.$action.'.php';
 ?>

@@ -47,7 +47,7 @@
 											<div class="h_nav">
 												<?php foreach($values as $item): ?>
 												<ul>
-													<li><a href="?id=<?php echo $item['MaLoaiSP']?>"><?php echo $item['TenLoai']?></a></li>
+													<li><a href="?controller=category&action=pro_type&id=<?php echo $item['MaLoaiSP']?>"><?php echo $item['TenLoai']?></a></li>
 												</ul>	
 												<?php endforeach ?>
 											</div>							
