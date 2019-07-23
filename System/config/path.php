@@ -5,7 +5,7 @@ define('MODEL_PATH', 'Site/Model/');
 define('VIEW_PATH', 'Site/View/');
 define('LIBRARY', 'System/library/');
 define('HELPER', 'System/helper/');
-
+define("ROOT", $_SERVER['DOCUMENT_ROOT'] ."/QLBH/Upload/");
 define('DEFAULT_CONTROLLER', 'Home');
 define('DEFAULT_ACTION', 'index');
 ?>

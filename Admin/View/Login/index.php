@@ -12,13 +12,13 @@
   <title>SB Admin - Login</title>
 
   <!-- Bootstrap core CSS-->
-  <link href="View/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom fonts for this template-->
-  <link href="View/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="Public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template-->
-  <link href="View/css/sb-admin.css" rel="stylesheet">
+  <link href="Public/admin/css/sb-admin.css" rel="stylesheet">
 
 </head>
 
