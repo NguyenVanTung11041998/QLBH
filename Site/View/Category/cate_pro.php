@@ -118,7 +118,7 @@
 			<?php foreach($products as $item): ?>
                 <div class="col-md-4 bottom-cd simpleCart_shelfItem">
 					<div class="product-at ">
-						<a href="single.html">
+						<a href="?controller=Product&action=detail&id=<?php echo $item['MaSP']?>">
 							<img class="img-responsive thumbar" src="Upload/product/<?php echo $item['HinhAnh']?>" alt="">
 							<div class="pro-grid">
 								<span class="buy-in">Buy Now</span>
