@@ -24,7 +24,7 @@
 				<i class="fa fa-dashboard"></i>  <a href="admin.php?controller=supplier">Dashboard</a>
 			</li>
 			<li class="active">
-				<i class="fa fa-file"></i> Nhà			 cung cấp
+				<i class="fa fa-file"></i> Nhà cung cấp
 			</li>
 		</ol>
 		<div class="clearfix"></div>

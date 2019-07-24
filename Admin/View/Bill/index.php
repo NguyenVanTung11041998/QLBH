@@ -28,35 +28,32 @@
 						<th>Mã hóa đơn</th>
 						<th>Ngày lập</th>
 						<th>Tên khách hàng</th>
+						<td>Tổng tiền</td>
 						<th>Trạng thái</th>
 						<th>Chi tiết hóa đơn</th>
 					</tr>
 				</thead>
 				<tbody>
-					<!-- <?php $stt = 1; foreach ($product as $item): ?>
-					<tr>
-						<td><?php echo $stt ?></td>
-						<td><?php echo $item['name']; ?></td>
-						<td><?php echo $item['category_id']; ?></td>
-						<td><?php echo $item['sulg']; ?></td>	
-						<td>
-							<ul>
-								<li>Giá: <?php echo $item['price']; ?></li>
-								<li>Số lượng: <?php echo $item['number']; ?></li>
-							</ul>
-
-						</td>
-						<td>
-							<img src="<?php echo uploads() ?>product/<?php echo $item['thumbar']?>" style="width: 80px; height: 80px">
-						</td>
-						<td><?php echo $item['content']; ?></td>
-						<td>
-							<a href="edit.php?id=<?php echo $item['id']?>" class="btn btn-success btn-xs"><i class="fa fa-edit"></i>Sửa</a>
-							<a href="delete.php?id=<?php echo $item['id']?>" class="btn btn-danger btn-xs"><i class="fa fa-times"></i>Xóa</a>
-						</td>
-					</tr>
-
-					<?php $stt++; endforeach ?> -->
+					<?php
+						$i = 1;
+						while($row = mysqli_fetch_row($danhSachHoaDon))
+						{
+						?>
+							<tr>
+								<td><?php echo $i; ?></td>
+								<td><?php echo $row['0']; ?></td>
+								<td><?php echo $row['1']; ?></td>
+								<td><?php echo $row['2']; ?></td>
+								<td><?php echo $row['3']; ?> VND</td>
+								<td><?php echo $row['4']; ?></td>
+								<td>
+									<a href="admin.php?controller=bill-info&id=<?php echo $row['0']?>" class="btn btn-success">Xem chi tiết</a>
+								</td>
+							</tr>
+						<?php
+						$i++;
+						}  
+					?>
 				</tbody>
 			</table>
 
