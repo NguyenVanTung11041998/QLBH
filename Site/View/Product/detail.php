@@ -197,7 +197,7 @@
                             <span class="women1">: CK09</span>
                         </li>
                     </ul>
-                    <a href="#" class="add-cart item_add">ADD TO CART</a>
+                    <a href="?controller=cart&action=addcart&id=<?php echo $detail['MaSP']?>" class="add-cart item_add">ADD TO CART</a>
                 </div>
             </div>
             <div class="clearfix"> </div>

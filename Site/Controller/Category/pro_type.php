@@ -10,6 +10,7 @@
     //_debug($loaisp);
     $maLoaiSP = getInput('id');
     $products = $cate->get_products_DM($maLoaiSP);
+    $loaiSP = $cate->fetch_name('loaisanpham','MaLoaiSP', $maLoaiSP);
     //_debug($products);
     $view = $controller.'/'.$action.'.php';
 ?>

@@ -1709,7 +1709,7 @@ a.cpns:hover{
 	color:#000;
 	text-decoration:underline;
 }
-a.continue{
+h3.continue{
 	background:#EF5F21;
 	padding:10px 20px;
 	  font-family: 'Lato', sans-serif;
@@ -2409,4 +2409,29 @@ p.text-danger {
 .img-related{
 	width: 176.25px;
 	height: 180px;
+}
+.title-main{
+	border-bottom: 2px solid #EF5F21;
+	margin: 0 15px 10px 15px;
+	font-family: 'Lato', sans-serif;
+}
+.title-main >a{
+	text-align: center;
+    display: inline-block;
+    padding: 10px 25px 6px 25px;
+    background: #EF5F21;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 18px;
+    border-top-right-radius: 20px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.memenu >li{
+	position: relative;
+}
+
+.memenu >li:hover.mepanel{
+	display: block;
 }

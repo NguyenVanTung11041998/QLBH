@@ -1,5 +1,5 @@
-.memenu{margin-bottom:0px;padding:0;width:100%;list-style:none;display:inline-block;position:relative;font-size:15px}
-.memenu li{margin-bottom:-5px;display:inline}
+.memenu{margin-bottom:0px;padding:0;width:100%;list-style:none;display:inline-block;font-size:15px}
+.memenu li{margin-bottom:-5px;display:inline; float: left;}
 .memenu>li>a{float:left;padding:8px 30px;text-decoration:none;text-transform:capitalize;font-size:1em; font-weight: 500; -webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
 	-o-transition: all 0.3s ease-in-out;
@@ -16,7 +16,7 @@
 .memenu .dropdown li:last-child{border-bottom:0}
 .memenu .dropdown li a{float:left;width:100%;padding:10px 25px;text-decoration:none;display:block;border:0 none;font-size:14px;color:#444;background:0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;transition:color .4s ease-in-out;-moz-transition:color .4s ease-in-out;-webkit-transition:color .4s ease-in-out;-o-transition:color .4s ease-in-out}
 .memenu .dropdown li:hover>a{background:#dbdbdb}
-.memenu>li>.mepanel{position:absolute;display:none;background:#ffffff;box-shadow: 0px 2px 4px #777; width:100.2%;top:57px;left:-1px;z-index:99;padding:20px 30px 20px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
+.memenu>li>.mepanel{position:absolute;display:none;background:#ffffff;box-shadow: 0px 2px 4px #777; min-width:300px;top:57px;left:0;z-index:99;padding:10px 0;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .memenu .mepanel ul{margin:0;padding:0}
 .memenu .mepanel img{width:100%;border:solid 1px #dedede;cursor:pointer;-webkit-transition:border .3s linear;-moz-transition:border .3s linear;-o-transition:border .3s linear;transition:border .3s linear}.memenu .mepanel img:hover{border:solid 1px #777}.memenu form.contact input,.memenu form.contact textarea{font-family:Calibri,Arial;font-size:16px;color:#444;outline:0}
 .memenu form.contact input[type="text"],
@@ -25,13 +25,13 @@
 .memenu form.contact input[type="text"]:focus,
 .memenu form.contact textarea:focus{border:solid 1px #999}
 .memenu form.contact input[type="submit"]{width:100px;height:35px;border:0;color:#fff;cursor:pointer;background:#999}
-.mepanel .row{width:100%;margin-top:15px}
+.mepanel .row{width:100%;margin-top:15px;margin-right: 0; margin-left: 0}
 .mepanel .row:first-child{margin-top:0}
 .mepanel .row:before,.mepanel .row:after{display:table;content:"";line-height:0}
 .mepanel .row:after{clear:both}
 .mepanel .row .col1,.mepanel .row .col2,.mepanel .row .col3,.mepanel .row .col4,.mepanel .row .col5,.mepanel .row .col6{display:block;width:100%;min-height:20px;float:left;margin-left:2.127659574468085%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
 .mepanel .row [class*="col"]:first-child{margin-left:0}
-.mepanel .row .col1{width:31.893617021276595%}
+.mepanel .row .col1{width:33.893617021276595%}
 .mepanel .row .col2{width:31.914893617021278%}
 .mepanel .row .col3{width:48.93617021276595%}
 .mepanel .row .col4{width:65.95744680851064%}
@@ -137,6 +137,26 @@ skyblue .mepanel img:hover,.skyblue form.contact input[type="text"]:focus,.skybl
 .skyblue li a.color6:hover{
 	background:#00677C;
 	color: #ffffff;
+}
+.mepanel .row ul{
+
+}
+.mepanel .row ul li{
+	width: 50%;
+	margin-bottom: 5px;
+}
+.mepanel .row ul li a{
+	text-decoration: none;
+	padding: 7px 0 7px 15px;
+	display: block;
+}
+.mepanel .row ul li:hover a{
+	color: #fff;
+	background: #EF5F21;
+}
+.memenu>li:hover>a{
+	color: #fff;
+	background: #EF5F21;
 }
 	
 

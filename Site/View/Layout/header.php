@@ -16,7 +16,7 @@
 
 					</ul>
 					<div class="cart box_1">
-						<a href="checkout.html">
+						<a href="?controller=cart">
 							<h3> <div class="total">
 								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
 								<img src="Upload/cart.png" alt=""/></h3>
@@ -35,26 +35,23 @@
 						<a href="index.php"><img src="Upload/logo.png" alt=""></a>	
 					</div>
 					<div class=" h_menu4">
-						<ul class="memenu skyblue">
+						<ul class="memenu skyblue clearfix">
 							<li class="active grid"><a class="color8" href="index.php">Home</a></li>	
 							<?php foreach($loaisp as $key => $value): ?>
-							<?php foreach($value as $keys => $values): ?>
-							<li><a class="color1" href="?controller=category&action=cate_pro&id=<?php echo $keys?>"><?php echo $key?></a>
-							<?php endforeach ?>
-								<div class="mepanel">
-									<div class="row">
-										<div class="col1">
-											<div class="h_nav">
+								<?php foreach($value as $keys => $values): ?>
+									<li><a class="color1" href="?controller=category&action=cate_pro&id=<?php echo $keys?>"><?php echo $key?></a>
+								
+									<div class="mepanel">
+										<div class="row">
+											<ul class="clearfix">
 												<?php foreach($values as $item): ?>
-												<ul>
 													<li><a href="?controller=category&action=pro_type&id=<?php echo $item['MaLoaiSP']?>"><?php echo $item['TenLoai']?></a></li>
-												</ul>	
 												<?php endforeach ?>
-											</div>							
+											</ul>
 										</div>
-									</div>
-								</div>	
-							</li>
+									</div>	
+								</li>
+								<?php endforeach ?>
 							<?php endforeach ?>
 							<li><a class="color4" href="blog.html">Blog</a></li>				
 							<li><a class="color6" href="contact.html">Conact</a></li>

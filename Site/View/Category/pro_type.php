@@ -115,6 +115,9 @@
             </div>
         </div>
         <div class="col-md-9 product1">
+            <h3 class="title-main">
+                <a href="javascript:void(0)"><?php echo $loaiSP['TenLoai']?></a>
+            </h3>
 			<?php foreach($products as $item): ?>
                 <div class="col-md-4 bottom-cd simpleCart_shelfItem">
 					<div class="product-at ">

@@ -67,5 +67,12 @@
             }
             return $data;
         }
+
+        public function fetch_name($table, $column, $id)
+        {
+            $sql = "SELECT *FROM $table WHERE $column = $id";
+            $kq = $this->db->ExecuteQuery($sql);
+            return mysqli_fetch_assoc($kq);
+        }
     }
 ?>
