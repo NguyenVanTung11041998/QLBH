@@ -1,6 +1,6 @@
 <?php
     $cart = new cart;
-    if(!isset($_SESSION['name_user']))
+    if(!isset($_SESSION['user_name']))
     {
         echo "<script>alert('Bạn cần phải đăng nhâp để sử dụng chức năng này');location.href='index.php'</script>";
     }

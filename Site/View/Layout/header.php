@@ -9,26 +9,34 @@
 						<input type="submit" value="Go">
 					</form>
 				</div>
-				<div class="header-left">		
-					<ul>
-						<li ><a href="?controller=Login">Đăng nhập</a></li>
-						<li><a  href="?controller=Register">Đăng ký</a></li>
-
-					</ul>
-					<div class="cart box_1">
-						<a href="?controller=cart">
-							<h3> <div class="total">
-								<span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> items)</div>
-								<img src="Upload/cart.png" alt=""/></h3>
+				<div class="header-left">
+					<?php if(isset($_SESSION['user_name'])): ?>
+						<li>Xin chào <?php echo $_SESSION['user_name']; ?></li>
+						
+						<div class="cart box_1">
+							<a href="?controller=cart">
+								<i class="fa fa-shopping-cart"></i>
+								Giỏ hàng
 							</a>
-							<p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
-
 						</div>
+						<li>
+							<a href="" style="padding-bottom:5px"><i class="fa fa-user"></i> Tài khoản <i class="fa fa-caret-down"></i></a>
+							<ul class="header-submenu">
+								<li style="margin-right:0"><a href=""><i class="fa fa-info-circle"></i>Thông tin</a></li>
+								<li><a href="?controller=logout"><i class="fa fa-share-square-o"></i>Đăng xuất</a></li>
+							</ul>
+						</li>
 						<div class="clearfix"> </div>
+					<?php else: ?>
+						<ul>
+							<li ><a href="?controller=Login"><i class="fa fa-sign-in"></i>Đăng nhập</a></li>
+							<li><a  href="?controller=Register"><i class="fa fa-user"></i></i>Đăng ký</a></li>
+						</ul>
+					<?php endif ?>	
 					</div>
 					<div class="clearfix"> </div>
 				</div>
-			</div>
+		</div>
 			<div class="container">
 				<div class="head-top">
 					<div class="logo">

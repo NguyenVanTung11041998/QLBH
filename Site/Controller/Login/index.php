@@ -19,8 +19,8 @@
 			$is_check = $login -> fetchuser($username, md5($password));
 			if($is_check != NULL)
 			{
-				$_SESSION['name_user'] = $is_check['HoTen'];
-				$_SESSION['id_user'] = $is_check['ID'];
+				$_SESSION['user_name'] = $is_check['HoTen'];
+				$_SESSION['user_id'] = $is_check['ID'];
 				echo "<script>alert('Đăng nhập thành công'); location.href = '?controller=Home'</script>";
 			}
 			else{

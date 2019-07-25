@@ -24,10 +24,10 @@
                             <td><?php echo FormatPrice($value['price'])?></td>
                             <td><?php echo FormatPrice($value['qty']*$value['price'])?></td>
                             <td>
-                                <a class="btn btn-danger" href="?controller=cart&action=remore&id=$value['MaSP']">Xóa</a>
+                                <a class="btn btn-danger" href="?controller=cart&action=remore&id=<?php echo $key?>">Xóa</a>
                                 <a class="btn btn-success" href="">Sửa</a>
                             </td>
-                        </tr>
+                        </tr>s
                        <?php $stt++; endforeach?>
                 </tbody>
             </table>
