@@ -62,7 +62,7 @@
 								<td><?php echo $value->GetDonGia()." VND"; ?></td>
 								<td><?php echo $value->GetNgayCapNhat(); ?></td>
 								<td><?php echo $value->GetMoTa(); ?></td>
-								<td><?php echo $value->GetHinhAnh(); ?></td>
+								<td><img src="Upload/product/<?php echo $value->GetHinhAnh(); ?>" style="width: 80px; height: 80px" alt=""></td>
 								<td><?php echo $value->GetSoLuongTon(); ?></td>
 								<td><?php if($value->IsMoi()) echo "Mới"; else echo "Cũ"; ?></td>
 								<td><?php echo $value->GetMaNCC(); ?></td>
