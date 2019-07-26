@@ -57,7 +57,11 @@
 		}
 		default:
 		{
-			$listLoaiSP = $loaiSanPhamModel->LayDanhSach();
+			if(isset($_GET['page']) && $_GET['page'])
+				$page = $_GET['page'];
+			else
+				$page = 1;
+			$listLoaiSP = $loaiSanPhamModel->LayDanhSach($page, 20);
 			require_once('Admin/View/CategoryProduct/index.php');
 			break;
 		}

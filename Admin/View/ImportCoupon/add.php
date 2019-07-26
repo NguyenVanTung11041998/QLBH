@@ -82,7 +82,7 @@
         var idCuoi = $('.tablePhieuNhapChiTiet').find("tr:last-child").attr("data-id");
         var i = parseInt(idCuoi) + 1;
         var tdNoiDung = $('.trAppend').html();
-        var trNoiDung = '<tr class="trAppended" data-id="' + i +'">' + tdNoiDung +'</tr>';
+        var trNoiDung = '<tr class="trAppended" data-id="' + i +'">' + tdNoiDung + '</tr>';
         $('.tablePhieuNhapChiTiet').append(trNoiDung);
         LoadIDLenThe();
         var rowCount = $('.trAppended').length;

@@ -51,7 +51,11 @@
 		}
 		default:
 		{
-			$listDanhMuc = $danhMucModel->LayDanhSach();
+			if(isset($_GET['page']) && $_GET['page'] > 0)
+				$page = $_GET['page'];
+			else
+				$page = 1;
+			$listDanhMuc = $danhMucModel->LayDanhSach($page, 20);
 			require_once('Admin/View/Category/index.php');
 			break;
 		}
