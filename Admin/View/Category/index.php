@@ -15,11 +15,19 @@
 				<i class="fa fa-file"></i> Danh mục
 			</li>
 		</ol>
+		<div class="form-group row">
+			<form action="" method="GET">
+				<div class="col-sm-4">
+					<input type="text" id="search_text" class="form-control" placeholder="Search" name="search" /> 
+				</div>
+				<button type="button" id="search" class="btn btn-primary">Search</button>
+			</form>
+		</div>
 		<div class="clearfix"></div>
 	</div>
 </div>
 <div class="row">
-	<div class="col-lg-12">
+	<div class="col-lg-12" id="table_data">
 		<div class="table-responsive">
 			<table class="table table-bordered table-hover">
 				<thead>
@@ -99,6 +107,25 @@
 				}
 			});
 		}
+	});
+
+	function LoadData(query){
+		$.ajax({
+		    url:"Admin/Controller/Category/fetch.php",
+		    method:"POST",
+		    data:{query:query},
+		    success:function(data) {
+		    	$('#table_data').html(data);
+		   }
+		});
+	}
+
+	$('#search').click(function() {
+	    var search = $('#search_text').val();
+	    if(search != '')
+	    	LoadData(search);
+	    else
+	    	LoadData();
 	});
 </script>
 
