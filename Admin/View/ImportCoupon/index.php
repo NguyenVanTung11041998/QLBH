@@ -16,11 +16,19 @@
 				<i class="fa fa-file"></i> Phiếu nhập<!--  -->
 			</li>
 		</ol>
+		<div class="form-group row">
+			<form action="" method="GET">
+				<div class="col-sm-4">
+					<input id="datePicker" type="date" style="height: 2.5em; width:100%" /> 
+				</div>
+				<button type="button" id="search" class="btn btn-primary">Search</button>
+			</form>
+		</div>
 		<div class="clearfix"></div>
 	</div>
 </div>
 <div class="row">
-	<div class="col-lg-12">
+	<div class="col-lg-12" id="table_data">
 		<div class="table-responsive">
 			<table class="table table-bordered table-hover">
 				<thead>
@@ -58,15 +66,15 @@
 				<nav aria-label="Page navigation">
 					<ul class="pagination">
 						<li>
-							<a href="#" aria-label="Previous">
+							<a href="admin.php?controller=import-coupon&page=<?php echo ($page - 1);?>" aria-label="Previous">
 								<span aria-hidden="true">&laquo;</span>
 							</a>
 						</li>
-						<li><a href="index_pro.php?page=1">1</a></li>
-						<li><a href="index_pro.php?page=2">2</a></li>
-						<li><a href="index_pro.php?page=3">3</a></li>
+						<li><a href="admin.php?controller=import-coupon&page=<?php echo $page;?>"><?php echo $page;?></a></li>
+						<li><a href="admin.php?controller=import-coupon&page=<?php echo ($page + 1);?>"><?php echo ($page + 1);?></a></li>
+						<li><a href="admin.php?controller=import-coupon&page=<?php echo ($page + 2);?>"><?php echo ($page + 2);?></a></li>
 						<li>
-							<a href="#" aria-label="Next">
+							<a href="admin.php?controller=import-coupon&page=<?php echo ($page + 1);?>" aria-label="Next">
 								<span aria-hidden="true">&raquo;</span>
 							</a>
 						</li>
@@ -76,6 +84,27 @@
 		</div>
 	</div>
 </div>
+
+<script type="text/javascript">
+	function LoadData(query){
+		$.ajax({
+		    url:"Admin/Controller/ImportCoupon/fetch.php",
+		    method:"POST",
+		    data:{query:query},
+		    success:function(data) {
+		    	$('#table_data').html(data);
+		   }
+		});
+	}
+
+	$('#search').click(function() {
+	    var search = $('#datePicker').val();
+	    if(search != '')
+	    	LoadData(search);
+	    else
+	    	LoadData();
+	});
+</script>
 
 <!-- /.row -->
 <?php require_once("Admin/View/Layout/adfooter.php");?>

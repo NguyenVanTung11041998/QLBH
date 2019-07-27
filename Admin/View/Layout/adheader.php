@@ -11,6 +11,7 @@
 	<link href="Public/admin/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Custom CSS -->
 	<link href="Public/admin/css/sb-admin.css" rel="stylesheet">
+
 	<!-- Custom Fonts -->
 	<link href="Public/admin/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="Public/css/style.css">

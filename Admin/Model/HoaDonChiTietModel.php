@@ -8,9 +8,11 @@
 			$this->dbConfig = new DBConfig;
 		}
 
-		public function LayDanhSachTheoMaHD($maHD)
+		public function LayDanhSachTheoMaHD($maHD, $page, $pageSize)
 		{
-			$query = "Select * From HoaDonChiTiet Where MaHD = $maHD";
+			$pageStart = ($page - 1) * $pageSize;
+
+			$query = "Select * From HoaDonChiTiet Where MaHD = $maHD Limit $pageStart, $pageSize";
 			$bangDuLieu = $this->dbConfig->ExecuteQuery($query);
 			$listHoaDonChiTiet  = array();
 			while ($row = mysqli_fetch_row($bangDuLieu)) 

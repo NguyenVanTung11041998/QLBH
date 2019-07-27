@@ -53,10 +53,10 @@
 						<td>'.$i.'</td>
 						<td>'.$value->GetMaSP().'</td>
 						<td>'.$value->GetTenSP().'</td>
-						<td>'.$value->GetDonGia().'</td>
+						<td>'.$value->GetDonGia().' VNĐ</td>
 						<td>'.$value->GetNgayCapNhat().'</td>
 						<td>'.$value->GetMoTa().'</td>
-						<td>'.$value->GetHinhAnh().'</td>
+						<td><img src="Upload/product/'.$value->GetHinhAnh().'" style="width: 80px; height: 80px" alt=""></td>
 						<td>'.$value->GetSoLuongTon().'</td>
 						<td>'; if($value->IsMoi()) $output .= 'Mới'; else $output .= 'Cũ'; $output .= '</td>
 						<td>'.$value->GetMaNCC().'</td>
@@ -80,14 +80,14 @@
 				<nav aria-label="Page navigation">
 					<ul class="pagination">
 						<li>
-							<a href="#" aria-label="Previous">
+							<a href="admin.php?controller=product" aria-label="Previous">
 								<span aria-hidden="true">&laquo;</span>
 							</a>
 						</li>
-						<li><a href="index.php?page=1">1</a></li>
-						<li><a href="index.php?page=2">2</a></li>
+						<li><a href="admin.php?controller=product">1</a></li>
+						<li><a href="admin.php?controller=product">2</a></li>
 						<li>
-							<a href="#" aria-label="Next">
+							<a href="admin.php?controller=product" aria-label="Next">
 								<span aria-hidden="true">&raquo;</span>
 							</a>
 						</li>

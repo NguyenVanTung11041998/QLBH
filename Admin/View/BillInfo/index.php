@@ -41,7 +41,7 @@
 								<td><?php echo $value->GetMaHD(); ?></td>
 								<td><?php echo $value->GetMaSP(); ?></td>
 								<td><?php echo $value->GetSoLuongMua(); ?></td>
-								<td><?php echo $value->GetDonGia(); ?></td>
+								<td><?php echo $value->GetDonGia(); ?> VNĐ</td>
 							</tr>
 	            		<?php
 	            			$i++;
@@ -54,14 +54,14 @@
 		    	<nav aria-label="Page navigation">
 				    <ul class="pagination">
 				        <li>
-				            <a href="#" aria-label="Previous">
+				            <a href="admin.php?controller=bill-info&id=<?php echo $id;?>&page=<?php echo ($page - 1);?>" aria-label="Previous">
 				            <span aria-hidden="true">&laquo;</span>
 				            </a>
 				        </li>
-				        <li><a href="index.php?page=1">1</a></li>
-				        <li><a href="index.php?page=2">2</a></li>
+				        <li><a href="admin.php?controller=bill-info&id=<?php echo $id;?>&page=<?php echo $page;?>"><?php echo $page;?></a></li>
+				        <li><a href="admin.php?controller=bill-info&id=<?php echo $id;?>&page=<?php echo ($page + 1);?>"><?php echo ($page + 1);?></a></li>
 				        <li>
-				            <a href="#" aria-label="Next">
+				            <a href="admin.php?controller=bill-info&id=<?php echo $id;?>&page=<?php echo ($page + 1);?>" aria-label="Next">
 				            <span aria-hidden="true">&raquo;</span>
 				            </a>
 				        </li>

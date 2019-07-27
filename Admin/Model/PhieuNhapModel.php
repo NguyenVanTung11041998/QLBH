@@ -8,9 +8,10 @@
 			$this->dbConfig = new DBConfig;
 		}
 
-		public function LayDanhSach()
+		public function LayDanhSach($page, $pageSize)
 		{
-			$query = "Select * From PhieuNhap";
+			$pageStart = ($page - 1) * $pageSize;
+			$query = "Select * From PhieuNhap Limit $pageStart, $pageSize";
 			$bangDuLieu = $this->dbConfig->ExecuteQuery($query);
 			$listPhieuNhap = array();
 			while ($row = mysqli_fetch_row($bangDuLieu)) 

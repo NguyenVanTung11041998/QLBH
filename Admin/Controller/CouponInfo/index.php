@@ -2,9 +2,18 @@
 	include "Admin/Model/PhieuNhapChiTietModel.php";
 	$phieuNhapChiTietModel = new PhieuNhapChiTietModel;
 
-	$maPN = $_GET['id'];
+	if(isset($_GET['page']) && $_GET['page'] > 0)
+		$page = $_GET['page'];
+	else
+		$page = 1;
 
-	$listPhieuNhapChiTiet = $phieuNhapChiTietModel->LayDanhSachHoaDonChiTietTheoMaPN($maPN);
+	if(isset($_GET['id']))
+	{
+		$maPN = $_GET['id'];
+		$listPhieuNhapChiTiet = $phieuNhapChiTietModel->LayDanhSachHoaDonChiTietTheoMaPN($maPN, $page, 20);
+	}
+	else
+		$listPhieuNhapChiTiet = array();
 	
 	require_once('Admin/View/CouponInfo/index.php');
 ?>

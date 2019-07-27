@@ -48,7 +48,12 @@
 		}
 		default:
 		{
-			$listPhieuNhap = $phieuNhapModel->LayDanhSach();
+			if(isset($_GET['page']) && $_GET['page'] > 0)
+				$page = $_GET['page'];
+			else
+				$page = 1;
+
+			$listPhieuNhap = $phieuNhapModel->LayDanhSach($page, 20);
 
 			require_once("Admin/View/ImportCoupon/index.php");
 		}	

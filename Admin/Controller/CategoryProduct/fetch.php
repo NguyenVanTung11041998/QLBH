@@ -6,7 +6,7 @@
 	if(isset($_POST['query']))
 	{
 		$search = $_POST['query'];
-		$query = "SELECT * FROM LoaiSanPham WHERE MaLoaiSP = $search";
+		$query = "SELECT * FROM LoaiSanPham WHERE TenLoai LIKE '%$search%'";
 	}
 	else
 		$query = "SELECT * FROM LoaiSanPham";
@@ -60,14 +60,14 @@
 				<nav aria-label="Page navigation">
 					<ul class="pagination">
 						<li>
-							<a href="#" aria-label="Previous">
+							<a href="admin.php?controller=category-product" aria-label="Previous">
 								<span aria-hidden="true">&laquo;</span>
 							</a>
 						</li>
-						<li><a href="index.php?page=1">1</a></li>
-						<li><a href="index.php?page=2">2</a></li>
+						<li><a href="admin.php?controller=category-product">1</a></li>
+						<li><a href="admin.php?controller=category-product">2</a></li>
 						<li>
-							<a href="#" aria-label="Next">
+							<a href="admin.php?controller=category-product" aria-label="Next">
 								<span aria-hidden="true">&raquo;</span>
 							</a>
 						</li>
