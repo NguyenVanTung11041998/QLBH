@@ -3,11 +3,13 @@
 	{
 		private $maPN;
 		private $ngayLap;
+		private $tongTienNhap;
 
-		public function __construct($maPN, $ngayLap)
+		public function __construct($maPN, $ngayLap, $tongTienNhap)
 		{
 			$this->maPN = $maPN;
 			$this->ngayLap = $ngayLap;
+			$this->tongTienNhap = $tongTienNhap;
 		}
 
 		public function GetMaPN()
@@ -18,6 +20,11 @@
 		public function GetNgayLap()
 		{
 			return $this->ngayLap;
+		}
+
+		public function GetTongTienNhap()
+		{
+			return $this->tongTienNhap;
 		}
 	}
 ?>

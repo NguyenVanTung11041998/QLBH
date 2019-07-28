@@ -1,15 +1,18 @@
 <?php 
-	if(isset($_GET['action']))
-		$action = $_GET['action'];
-	else
-		$action = '';
+	include "Admin/Model/HoaDonChiTietModel.php";
+	$hoaDonChiTietModel = new HoaDonChiTietModel;
 
-	switch ($action) 
+	if(isset($_GET['page']) && $_GET['page'] > 0)
+		$page = $_GET['page'];
+	else
+		$page = 1;
+
+	if(isset($_GET['id']))
 	{
-		default:
-		{
-			require_once('Admin/View/BillInfo/index.php');
-			break;
-		}
+		$id = $_GET['id'];
+		$listHoaDonChiTiet = $hoaDonChiTietModel->LayDanhSachTheoMaHD($id, $page, 20);
 	}
+	else
+		$listHoaDonChiTiet = array();
+	require_once("Admin/View/BillInfo/index.php");
 ?>

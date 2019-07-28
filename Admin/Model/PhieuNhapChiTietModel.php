@@ -8,9 +8,11 @@
 			$this->dbConfig = new DBConfig;
 		}
 
-		public function LayDanhSachHoaDonChiTietTheoMaPN($maPN)
+		public function LayDanhSachHoaDonChiTietTheoMaPN($maPN, $page, $pageSize)
 		{
-			$query = "Select * From PhieuNhapChiTiet where MaPN = $maPN";
+			$pageStart = ($page - 1) * $pageSize;
+
+			$query = "Select * From PhieuNhapChiTiet where MaPN = $maPN Limit $pageStart, $pageSize";
 			$bangDuLieu = $this->dbConfig->ExecuteQuery($query);
 			$listPhieuNhapChiTiet = array();
 			while ($row = mysqli_fetch_row($bangDuLieu)) 
@@ -32,6 +34,13 @@
 				$listPhieuNhapChiTiet[] = $phieuNhapChiTiet;
 			}
 			return $listPhieuNhapChiTiet;
+		}
+
+		public function Them($maPN, $maSP, $soLuongNhap, $donGiaNhap)
+		{
+			$query = "INSERT INTO phieunhapchitiet (MaPN, MaSP, SoLuongNhap, DonGiaNhap) VALUES ($maPN, $maSP, $soLuongNhap, $donGiaNhap)";
+			$ketQua = $this->dbConfig->ExecuteQuery($query);
+			return $ketQua;
 		}
 	}
 ?>

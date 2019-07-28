@@ -4,16 +4,14 @@
 <div class="row">
 	<div class="col-lg-12">
 		<h1 class="page-header">
-			Thông tin hóa đơn	
-			<!-- <small>Subheading</small> -->
-			<a href="add.php" class="btn btn-success">Thêm mới</a>
+			Thông tin hóa đơn chi tiết
 		</h1>
 		<ol class="breadcrumb">
 			<li>
-				<i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
+				<i class="fa fa-dashboard"></i>  <a href="admin.php?controller=bill">Dashboard</a>
 			</li>
 			<li class="active">
-				<i class="fa fa-file"></i> Sản phẩm<!--  -->
+				<i class="fa fa-file"></i> Hóa đơn
 			</li>
 		</ol>
 		<div class="clearfix"></div>
@@ -26,28 +24,29 @@
 				<thead>
 					<tr>
 						<th>STT</th>
-						<th>Name</th>
-						<th>Email</th>
-						<th>Phone</th>
-						<th>Địa chỉ</th>
-						<th>Action</th>
+						<th>Mã hóa đơn</th>
+						<th>Mã sản phẩm</th>
+						<th>Số lượng mua</th>
+						<th>Đơn giá</th>
 	                </tr>
 	            </thead>
 	            <tbody>
-	            	<?php $stt = 1; foreach ($admin as $item): ?>
-	            	<tr>
-	            		<td><?php echo $stt ?></td>
-	            		<td><?php echo $item['name']; ?></td>
-	            		<td><?php echo $item['email']; ?></td>
-	            		<td><?php echo $item['phone']; ?></td>
-	            		<td><?php echo $item['address']; ?></td>
-	            		<td>
-	            			<a href="edit.php?id=<?php echo $item['id']?>" class="btn btn-success btn-xs"><i class="fa fa-edit"></i>Sửa</a>
-	            			<a href="delete.php?id=<?php echo $item['id']?>" class="btn btn-danger btn-xs"><i class="fa fa-times"></i>Xóa</a>
-	            		</td>
-	            	</tr>
-
-	            	<?php $stt++; endforeach ?>
+	            	<?php  
+	            		$i = 1;
+	            		foreach ($listHoaDonChiTiet as $key => $value) 
+	            		{
+	            		?>
+							<tr>
+								<td><?php echo $i; ?></td>
+								<td><?php echo $value->GetMaHD(); ?></td>
+								<td><?php echo $value->GetMaSP(); ?></td>
+								<td><?php echo $value->GetSoLuongMua(); ?></td>
+								<td><?php echo $value->GetDonGia(); ?> VNĐ</td>
+							</tr>
+	            		<?php
+	            			$i++;
+	            		}
+	            	?>
 	            </tbody>
 	        </table>
 
@@ -55,14 +54,14 @@
 		    	<nav aria-label="Page navigation">
 				    <ul class="pagination">
 				        <li>
-				            <a href="#" aria-label="Previous">
+				            <a href="admin.php?controller=bill-info&id=<?php echo $id;?>&page=<?php echo ($page - 1);?>" aria-label="Previous">
 				            <span aria-hidden="true">&laquo;</span>
 				            </a>
 				        </li>
-				        <li><a href="index.php?page=1">1</a></li>
-				        <li><a href="index.php?page=2">2</a></li>
+				        <li><a href="admin.php?controller=bill-info&id=<?php echo $id;?>&page=<?php echo $page;?>"><?php echo $page;?></a></li>
+				        <li><a href="admin.php?controller=bill-info&id=<?php echo $id;?>&page=<?php echo ($page + 1);?>"><?php echo ($page + 1);?></a></li>
 				        <li>
-				            <a href="#" aria-label="Next">
+				            <a href="admin.php?controller=bill-info&id=<?php echo $id;?>&page=<?php echo ($page + 1);?>" aria-label="Next">
 				            <span aria-hidden="true">&raquo;</span>
 				            </a>
 				        </li>
@@ -73,4 +72,4 @@
 	</div>
 </div>
 
-<?php include("Public/template/adfooter.php"); ?>
+<?php include("Admin/View/layout/adfooter.php"); ?>

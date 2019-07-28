@@ -1,23 +1,23 @@
 <?php
 	include "../../../System/library/database.php";
-	include "../../Model/NhaCungCap.php";
+	include "../../Model/KhachHang.php";
 	$dbConfig = new DBConfig;
 	$output = '';
 	if(isset($_POST['query']))
 	{
 		$search = $_POST['query'];
-		$query = "SELECT * FROM NhaCungCap WHERE TenNCC LIKE '%$search%'";
+		$query = "SELECT * FROM KhachHang WHERE HoTen LIKE '%$search%'";
 	}
 	else
-		$query = "SELECT * FROM NhaCungCap";
+		$query = "SELECT * FROM KhachHang";
 
 	$bangDuLieu = $dbConfig->ExecuteQuery($query);
 
 	$result = array();
 	while ($row = mysqli_fetch_row($bangDuLieu)) 
 	{
-		$nhaCungCap = new NhaCungCap($row['0'], $row['1'], $row['2'], $row['3'], $row['4']);
-		$result[] = $nhaCungCap;
+		$khachHang = new KhachHang($row['0'], $row['1'], $row['2'], $row['3'], $row['4'], $row['5'], $row['6']);
+		$result[] = $khachHang;
 	}
 
 	if(mysqli_num_rows($bangDuLieu) > 0)
@@ -28,12 +28,11 @@
 			<thead>
 				<tr>
 					<th>STT</th>
-					<td>Mã nhà cung cấp</td>
-					<td>Tên nhà cung cấp</td>
+					<td>Mã khách hàng</td>
+					<td>Họ tên</td>
 					<td>Địa chỉ</td>
 					<td>Số điện thoại</td>
 					<td>Email</td>
-					<td>#</td>
 				</tr>
 			</thead>
 			<tbody>
@@ -44,15 +43,11 @@
 				$output .= '
 				<tr>
 					<td>'.$i.'</td>
-					<td>'.$value->GetMaNhaCungCap().'</td>
-					<td>'.$value->GetTenNhaCungCap().'</td>
+					<td>'.$value->GetID().'</td>
+					<td>'.$value->GetHoTen().'</td>
 					<td>'.$value->GetDiaChi().'</td>
 					<td>'.$value->GetSoDT().'</td>
 					<td>'.$value->GetEmail().'</td>
-					<td>
-						<a href="admin.php?controller=supplier&action=edit&id='.$value->GetMaNhaCungCap().'" class="btn btn-success"><i class="fa fa-edit"></i>Sửa</a>
-						<a href="admin.php?controller=supplier&action=delete&id='.$value->GetMaNhaCungCap().'" class="btn btn-danger" onClick="return confirmAction()"><i class="fa fa-times"></i>Xóa</a>
-					</td>
 				</tr>';
 				$i++;
 			} 
@@ -64,14 +59,14 @@
 				<nav aria-label="Page navigation">
 					<ul class="pagination">
 						<li>
-							<a href="admin.php?controller=supplier" aria-label="Previous">
+							<a href="admin.php?controller=customer" aria-label="Previous">
 								<span aria-hidden="true">&laquo;</span>
 							</a>
 						</li>
-						<li><a href="admin.php?controller=supplier">1</a></li>
-						<li><a href="admin.php?controller=supplier">2</a></li>
+						<li><a href="admin.php?controller=customer">1</a></li>
+						<li><a href="admin.php?controller=customer">2</a></li>
 						<li>
-							<a href="admin.php?controller=supplier" aria-label="Next">
+							<a href="admin.php?controller=customer" aria-label="Next">
 								<span aria-hidden="true">&raquo;</span>
 							</a>
 						</li>

@@ -8,6 +8,14 @@
 			<!-- <small>Subheading</small> -->
 			<a href="admin.php?controller=product&action=add" class="btn btn-success">Thêm mới</a>
 		</h1>
+		<div class="form-group row">
+			<form action="" method="GET">
+				<div class="col-sm-4">
+                    <input type="text" id="search_text" class="form-control" placeholder="Search" name="search" /> 
+                </div>
+                <button type="button" id="search" class="btn btn-primary">Search</button>
+			</form>
+		</div>
 		<ol class="breadcrumb">
 			<li>
 				<i class="fa fa-dashboard"></i>  <a href="admin.php?controller=product">Dashboard</a>
@@ -20,7 +28,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="col-lg-12">
+	<div class="col-lg-12" id="table_data">
 		<div class="table-responsive">
 			<table class="table table-bordered table-hover">
 				<thead>
@@ -51,7 +59,7 @@
 								<td><?php echo $i; ?></td>
 								<td><?php echo $value->GetMaSP(); ?></td>
 								<td><?php echo $value->GetTenSP(); ?></td>
-								<td><?php echo $value->GetDonGia()." VND"; ?></td>
+								<td><?php echo $value->GetDonGia()." VNĐ"; ?></td>
 								<td><?php echo $value->GetNgayCapNhat(); ?></td>
 								<td><?php echo $value->GetMoTa(); ?></td>
 								<td><img src="Upload/product/<?php echo $value->GetHinhAnh(); ?>" style="width: 80px; height: 80px" alt=""></td>
@@ -78,15 +86,15 @@
 				<nav aria-label="Page navigation">
 					<ul class="pagination">
 						<li>
-							<a href="#" aria-label="Previous">
+							<a href="admin.php?controller=product&page=<?php echo ($page - 1);?>" aria-label="Previous">
 								<span aria-hidden="true">&laquo;</span>
 							</a>
 						</li>
-						<li><a href="index_pro.php?page=1">1</a></li>
-						<li><a href="index_pro.php?page=2">2</a></li>
-						<li><a href="index_pro.php?page=3">3</a></li>
+						<li><a href="admin.php?controller=product&page=<?php echo $page;?>"><?php echo $page; ?></a></li>
+						<li><a href="admin.php?controller=product&page=<?php echo ($page + 1);?>"><?php echo ($page + 1); ?></a></li>
+						<li><a href="admin.php?controller=product&page=<?php echo ($page + 2);?>"><?php echo ($page + 2); ?></a></li>
 						<li>
-							<a href="#" aria-label="Next">
+							<a href="admin.php?controller=product&page=<?php echo ($page + 1);?>" aria-label="Next">
 								<span aria-hidden="true">&raquo;</span>
 							</a>
 						</li>
@@ -96,6 +104,25 @@
 		</div>
 	</div>
 </div>
+<script type="text/javascript">
+	function LoadData(query){
+		$.ajax({
+		    url:"Admin/Controller/Product/fetch.php",
+		    method:"POST",
+		    data:{query:query},
+		    success:function(data) {
+		    	$('#table_data').html(data);
+		   }
+		});
+	}
 
+	$('#search').click(function() {
+	    var search = $('#search_text').val();
+	    if(search != '')
+	    	LoadData(search);
+	    else
+	    	LoadData();
+	});
+</script>
 <!-- /.row -->
 <?php include("Admin/View/Layout/adfooter.php"); ?>

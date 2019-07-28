@@ -10,7 +10,7 @@
   <meta name="author" content="">
 
   <title>SB Admin - Login</title>
-
+  
   <!-- Bootstrap core CSS-->
   <link href="Public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
@@ -18,7 +18,7 @@
   <link href="Public/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 
   <!-- Custom styles for this template-->
-  <link href="Public/admin/css/sb-admin.css" rel="stylesheet">
+  <link href="Public/admin/css/sb-admin1.css" rel="stylesheet"> 
 
 </head>
 
@@ -61,11 +61,11 @@
   </div>
 
   <!-- Bootstrap core JavaScript-->
-  <script src="View/vendor/jquery/jquery.min.js"></script>
-  <script src="View/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="Public/vendor/jquery/jquery.min.js"></script>
+  <script src="Public/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="View/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="Public/vendor/jquery-easing/jquery.easing.min.js"></script>
 
 </body>
 
