@@ -15,6 +15,7 @@
             $_SESSION['cart'][$id]['thumbar'] = $product['HinhAnh'];
             $_SESSION['cart'][$id]['qty'] = 1;  
             $_SESSION['cart'][$id]['price'] = $product['DonGia'];
+
         }
         else
         {

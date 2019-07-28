@@ -72,8 +72,9 @@
 			$insert_user = $register -> insert($name, $email, $phone, $address, $username, $password);
 			if($insert_user > 0)
 			{
-				$_SESSION['success'] = 'Đăng ký thành công. Mời bạn đăng nhập.';
-				header("location: ?controller=Login");
+				
+				//echo "<script> if(confirm('Bạn có muốn chuyển sang trang đăng nhập không?')) {alert('Đăng nhập thành công'); location.href = '?controller=Home'; }</script>";
+				echo "<script>alert('Đăng ký thành công'); location.href = '?controller=login'</script>";
 			}
 			else
 			{

@@ -53,73 +53,25 @@
 <div class="content">
 	<div class="container">
 		<div class="content-top">
-			<h1>NEW RELEASED</h1>
+			<h1>SẢN PHẨM MỚI</h1>
 			<div class="grid-in">
-				<div class="col-md-4 grid-top">
-					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="Upload/pi.jpg" alt="">
-						<div class="b-wrapper">
-							<h3 class="b-animate b-from-left    b-delay03 ">
-								<span>T-Shirt</span>	
-							</h3>
+				<?php foreach($pro_new as $item): ?>
+					<div class="col-md-3 bottom-cd simpleCart_shelfItem">
+						<div class="product-at ">
+							<a href="?controller=product&action=detail&id=<?php echo $item['MaSP']?>">
+								<img class="img-responsive thumbar" src="Upload/product/<?php echo $item['HinhAnh']?>" alt="">
+								<div class="pro-grid">
+									<span class="buy-in">Buy Now</span>
+								</div>
+							</a>
 						</div>
-					</a>
-
-
-					<p><a href="single.html">Contrary to popular</a></p>
-				</div>
-				<div class="col-md-4 grid-top">
-					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="Upload/pi1.jpg" alt="">
-						<div class="b-wrapper">
-							<h3 class="b-animate b-from-left    b-delay03 ">
-								<span>Shoe</span>	
-							</h3>
-						</div>
-					</a>
-					<p><a href="single.html">classical Latin</a></p>
-				</div>
-				<div class="col-md-4 grid-top">
-					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="Upload/pi2.jpg" alt="">
-						<div class="b-wrapper">
-							<h3 class="b-animate b-from-left    b-delay03 ">
-								<span>Bag</span>	
-							</h3>
-						</div>
-					</a>
-					<p><a href="single.html">undoubtable</a></p>
-				</div>
-				<div class="clearfix"> </div>
-			</div>
-			<div class="grid-in">
-				<div class="col-md-4 grid-top">
-					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="Upload/pi3.jpg" alt="">
-						<div class="b-wrapper">
-							<h3 class="b-animate b-from-left    b-delay03 ">
-								<span>Shirt</span>	
-							</h3>
-						</div>
-					</a>
-					<p><a href="single.html">suffered alteration</a></p>
-				</div>
-				<div class="col-md-4 grid-top">
-					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="Upload/pi4.jpg" alt="">
-						<div class="b-wrapper">
-							<h3 class="b-animate b-from-left    b-delay03 ">
-								<span>Bag</span>	
-							</h3>
-						</div>
-					</a>
-					<p><a href="single.html">Content here</a></p>
-				</div>
-				<div class="col-md-4 grid-top">
-					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="Upload/pi5.jpg" alt="">
-						<div class="b-wrapper">
-							<h3 class="b-animate b-from-left    b-delay03 ">
-								<span>Shoe</span>	
-							</h3>
-						</div>
-					</a>
-					<p><a href="single.html">readable content</a></p>
-				</div>
+						<p class="tun"><?php echo $item['TenSP']?></p>
+						<a href="?controller=cart&action=addcart&id=<?php echo $item['MaSP']?>" class="item_add">
+							<p class="number item_price"><i> </i><?php echo formatPrice($item['DonGia'])?></p>
+						</a>
+					</div>
+				<?php endforeach?>
+				
 				<div class="clearfix"> </div>
 			</div>
 		</div>

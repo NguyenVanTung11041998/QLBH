@@ -129,7 +129,7 @@
 						</a>
 					</div>
 					<p class="tun"><?php echo $item['TenSP']?></p>
-					<a href="#" class="item_add">
+					<a href="?controller=cart&action=addcart&id=<?php echo $item['MaSP']?>" class="item_add">
 						<p class="number item_price"><i> </i><?php echo formatPrice($item['DonGia'])?></p>
 					</a>
                 </div>

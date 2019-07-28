@@ -43,3 +43,29 @@
 		<p >© 2015 New store All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
 	</div>
 </div>
+
+<script>
+	$(function(){
+        $updatecart = $(".updatecart");
+        $updatecart.click(function(e)
+        {
+            e.preventDefault();
+            $qty = $(this).parents("tr").find(".qty").val();
+            $key = $(this).attr("data-key");
+            $.ajax({
+                url: 'cap-nhat-gio-hang.php',
+                type: 'GET',
+                data: { 'qty':$qty, 'key':$key},
+                success:function(data)
+                {
+                    if(data=1)
+                    {
+                        alert("Cập nhật giỏ hàng thành công.");
+                        location.href = '?controller=cart';
+                    }
+                }
+            }); 
+
+        })
+    })
+</script>

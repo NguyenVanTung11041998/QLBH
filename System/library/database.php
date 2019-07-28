@@ -18,5 +18,9 @@
 		{
 			return mysqli_query($this->connection, $query);
 		}
+		public function connection()
+		{
+			return $this->connection;
+		}
 	}
 ?>

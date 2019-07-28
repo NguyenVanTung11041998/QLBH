@@ -10,7 +10,6 @@
         {
             $sql = "INSERT INTO khachhang(HoTen, Email, SoDT, DiaChi, TenDangNhap, MatKhau) VALUES('$hoTen', '$email', '$soDT', '$diaChi', '$tenDN', '$matKhau')";
             $kq = $this->db->ExecuteQuery($sql);
-            var_dump($kq);
             return $kq;
         }
 

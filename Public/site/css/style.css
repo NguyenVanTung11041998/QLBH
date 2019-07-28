@@ -2497,3 +2497,10 @@ p.text-danger {
 .memenu >li:hover.mepanel{
 	display: block;
 }
+
+.simpleCart_shelfItem{
+	margin-bottom: 25px;
+}
+.pay{
+	float: right;
+}
