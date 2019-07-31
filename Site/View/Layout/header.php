@@ -16,7 +16,7 @@
 						<div class="cart box_1">
 							<a href="?controller=cart">
 								<i class="fa fa-shopping-cart"></i>
-								Giỏ hàng
+								Giỏ hàng(<?php echo count($_SESSION['cart'])?>)
 							</a>
 						</div>
 						<li>
@@ -47,13 +47,13 @@
 							<li class="active grid"><a class="color8" href="index.php">Trang chủ</a></li>	
 							<?php foreach($loaisp as $key => $value): ?>
 								<?php foreach($value as $keys => $values): ?>
-									<li><a class="color1" href="?controller=category&action=cate_pro&id=<?php echo $keys?>"><?php echo $key?></a>
+									<li><a class="color1" href="?controller=category&action=cate_pro&id=<?php echo $keys?>&p=1"><?php echo $key?></a>
 								
 									<div class="mepanel">
 										<div class="row">
 											<ul class="clearfix">
 												<?php foreach($values as $item): ?>
-													<li><a href="?controller=category&action=pro_type&id=<?php echo $item['MaLoaiSP']?>"><?php echo $item['TenLoai']?></a></li>
+													<li><a href="?controller=category&action=pro_type&id=<?php echo $item['MaLoaiSP']?>&p=1"><?php echo $item['TenLoai']?></a></li>
 												<?php endforeach ?>
 											</ul>
 										</div>

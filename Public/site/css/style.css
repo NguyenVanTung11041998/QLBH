@@ -1033,7 +1033,7 @@ h3.tag {
     font-family: 'Lato', sans-serif;
 }
 .of-left-in{
-	 border-bottom: 1px solid #000;
+	margin-top: 30px;	
 }
 
 /*----*/
@@ -1046,7 +1046,7 @@ h3.tag {
 	  width: 68%;
 }
  h6.best2 {
-  font-size: 1em;
+  font-size: 18px;
   font-family: 'Lato', serif;
   line-height: 1.3em;
  }
@@ -1058,7 +1058,7 @@ h3.tag {
 	color:#EF5F21;
  }
  span.price-in1 {
-  font-size: 1.7em;
+  font-size: 16px;
   padding: 0.3em 0 0;
   display: block;
   color:#EF5F21;

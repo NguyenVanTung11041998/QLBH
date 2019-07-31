@@ -1,5 +1,6 @@
 <?php 
     $cate = new category;
+    //lay danh sach danh mục và loại sản phẩm
     $category = $cate->get_category('danhmuc');
     $data = [];
     foreach ($category as $item) {
@@ -7,8 +8,15 @@
         $list_loaisp = $cate->get_loaisp($id_cate);
         $data[$item['TenDanhMuc']] = $list_loaisp;
     }
+
+    //Lấy sản phẩm mới
+    $pro_new = $cate -> fetch_pro_new();
+    
     $maDM = getInput('id');
+    //lấy tên danh mục theo id
     $name_cate = $cate->fetch_name('danhmuc','MaDanhMuc',$maDM);
+    
+    //Phân trang
     if(isset($_GET['p']))
     {
         $p = $_GET['p'];

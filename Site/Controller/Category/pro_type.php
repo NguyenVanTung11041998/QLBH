@@ -8,6 +8,9 @@
         $data[$item['TenDanhMuc']] = $list_loaisp;
     }
     //_debug($loaisp);
+    //Lấy sản phẩm mới
+    $pro_new = $cate -> fetch_pro_new();
+    
     $maLoaiSP = getInput('id');
     $loaiSP = $cate->fetch_name('loaisanpham','MaLoaiSP', $maLoaiSP);
     //_debug($products);

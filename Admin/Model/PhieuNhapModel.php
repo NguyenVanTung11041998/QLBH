@@ -48,7 +48,7 @@
 
 		public function Them($ngayNhap)
 		{
-			$query = "Insert into PhieuNhap (NgayNhap, TongTienNhap) values ('$ngayNhap', 0)";
+			$query = "Insert into PhieuNhap (NgayNhap) values ('$ngayNhap')";
 			$ketQua = $this->dbConfig->ExecuteQuery($query);
 			return $ketQua;
 		}
