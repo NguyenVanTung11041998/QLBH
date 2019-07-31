@@ -1,7 +1,9 @@
 <div class="container">
     <div class="check">
-        <h1>My Shopping Bag (2)</h1>
         <div class="col-md-9 cart-items">
+            <h3 class="title-main col-md-12" style="padding:0; margin:0 0 20px 0">
+                <a href="javascript:void(0)">Giỏ hàng của tôi</a>
+            </h3>
             <table class="table table-hover" id="cart_info">
 	           	<thead>
 	           		<tr>

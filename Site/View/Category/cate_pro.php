@@ -250,15 +250,23 @@
         <div class="clearfix"> </div>
         <nav class="in">
             <ul class="pagination">
-                <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
-                <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                <li><a href="#">2 <span class="sr-only"></span></a></li>
-                <li><a href="#">3 <span class="sr-only"></span></a></li>
-                <li><a href="#">4 <span class="sr-only"></span></a></li>
-                <li><a href="#">5 <span class="sr-only"></span></a></li>
-                <li> <a href="#" aria-label="Next"><span aria-hidden="true">»</span> </a> </li>
-            </ul>
+                <li>
+                    <a href="?controller=category&action=cate_pro&id=<?php echo $maDM?>&p=<?php echo $p-1?> " aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <?php for($i=1; $i <= $sotrang; $i++): ?>
+                    <li class="<?php echo isset($_GET['p']) && $_GET['p']==$i ? 'active' : ''?>"><a href="?controller=category&action=cate_pro&id=<?php echo $maDM?>&p=<?php echo $i?> "><?php echo $i?></a></li>
+                <?php endfor ?>
+                <li>
+                    <a href="?controller=category&action=cate_pro&id=<?php echo $maDM?>&p=<?php echo $p+1?> " aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>    
         </nav>
     </div>
 </div>
+
+
 <!---->

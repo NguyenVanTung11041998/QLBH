@@ -35,11 +35,7 @@
 				</form>
 			</div>
 			<div class="col-md-4 left-account ">
-				<a href="single.html"><img class="img-responsive " src="Upload/s1.jpg" alt=""></a>
-				<div class="five">
-					<h2>25% </h2><span>discount</span>
-				</div>
-				<a href="index.php?controller=register" class="create">Create an account</a>
+				<a href="#"><img class="img-responsive " src="Upload/s1.jpg" alt=""></a>
 				<div class="clearfix"> </div>
 			</div>
 			<div class="clearfix"> </div>

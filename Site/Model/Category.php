@@ -74,5 +74,21 @@
             $kq = $this->db->ExecuteQuery($sql);
             return mysqli_fetch_assoc($kq);
         }
+        
+        public function phantrang($sql ,$page, $row)
+        {
+            $data = [];
+            $start = ($page-1) * $row;
+            $sql .= " LIMIT $start,$row ";
+            $kq = $this->db->ExecuteQuery($sql);
+            if($kq)
+            {
+                while($num = mysqli_fetch_assoc($kq))
+                {
+                    $data[] = $num;
+                }
+            }
+            return $data;
+        }
     }
 ?>

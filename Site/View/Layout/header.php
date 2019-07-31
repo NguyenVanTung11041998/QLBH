@@ -44,7 +44,7 @@
 					</div>
 					<div class=" h_menu4">
 						<ul class="memenu skyblue clearfix">
-							<li class="active grid"><a class="color8" href="index.php">Home</a></li>	
+							<li class="active grid"><a class="color8" href="index.php">Trang chủ</a></li>	
 							<?php foreach($loaisp as $key => $value): ?>
 								<?php foreach($value as $keys => $values): ?>
 									<li><a class="color1" href="?controller=category&action=cate_pro&id=<?php echo $keys?>"><?php echo $key?></a>
@@ -61,8 +61,8 @@
 								</li>
 								<?php endforeach ?>
 							<?php endforeach ?>
-							<li><a class="color4" href="blog.html">Blog</a></li>				
-							<li><a class="color6" href="contact.html">Conact</a></li>
+							<li><a class="color4" href="#">Blog</a></li>				
+							<li><a class="color6" href="#">Conact</a></li>
 						</ul> 
 					</div>
 

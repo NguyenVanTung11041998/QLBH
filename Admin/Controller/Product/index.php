@@ -80,7 +80,7 @@
 
 				// if($_FILES['txtHinhAnh']['name'])
 				// 	$hinhAnh = "Upload/".$_FILES['txtHinhAnh']['name'];
-				if(isset($_FILES['txtHinhAnh']))
+				if($_FILES['txtHinhAnh']['name'])
 				{
 					$file_name = $_FILES['txtHinhAnh']['name'];
 					$file_tmp = $_FILES['txtHinhAnh']['tmp_name'];
@@ -94,7 +94,10 @@
 					}
 				} 
 				else
+				{
 					$hinhAnh = $sanPham->GetHinhAnh();
+				}
+					
 				$soLuongTon = (int)$_POST['txtSoLuongTon'];
 				
 				$moi = 0;

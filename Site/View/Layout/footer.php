@@ -53,7 +53,7 @@
             $qty = $(this).parents("tr").find(".qty").val();
             $key = $(this).attr("data-key");
             $.ajax({
-                url: 'cap-nhat-gio-hang.php',
+                url: '?controller=cart&action=update_cate',
                 type: 'GET',
                 data: { 'qty':$qty, 'key':$key},
                 success:function(data)

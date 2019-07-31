@@ -6,7 +6,7 @@
 	if(isset($_POST['query']))
 	{
 		$search = $_POST['query'];
-		$query = "SELECT * FROM SanPham WHERE MaSP = $search";
+		$query = "SELECT * FROM SanPham WHERE TenSP LIKE '%$search%'";
 	}
 	else
 		$query = "SELECT * FROM SanPham";
