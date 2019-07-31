@@ -108,7 +108,6 @@
         var i = parseInt(idDau);
         $('.trAppended').each(function() {
             var id = ++i;
-            console.log("?"+ id + "?");
             $(this).attr("data-id", id);
             var nameMaSP = "MaSP_" + id;
             var nameSoLuongNhap = "SoLuongNhap_" + id;

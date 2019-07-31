@@ -56,7 +56,7 @@
                 <label for="inputEmail3" class="col-sm-2 control-label">Hình ảnh</label>
                 <div class="col-sm-3">
                     <input type="file" class="form-control" id="anh" name="txtHinhAnh">
-                    <div class="show_file"><img src="Upload/product/<?php echo $sanPham->GetHinhAnh();?>"></div>
+                    <div class="show_file"><img src="<?php echo $sanPham->GetHinhAnh();?>"></div>
                 </div>
             </div>
 
