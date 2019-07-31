@@ -67,7 +67,7 @@
                         </select>
                     </td>
                     <td><input class="txtSoLuongNhap" type="number" value="0" name="SoLuongNhap_0" /></td>
-                    <td><input class="txtDonGiaNhap" type="text" value="0" name="SoLuongNhap_0" />VND</td>
+                    <td><input class="txtDonGiaNhap" type="text" value="0" name="DonGiaNhap_0" />VND</td>
                     <td><button type="button" class="btnDelete btn btn-danger">Xóa</button></td>
                 </tr>
             </table>
