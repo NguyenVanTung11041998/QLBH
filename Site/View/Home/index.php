@@ -78,54 +78,27 @@
 		<!----->
 
 		<div class="content-top-bottom">
-			<h2>Featured Collections</h2>
-			<div class="col-md-6 men">
-				<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="Upload/t1.jpg" alt="">
-					<div class="b-wrapper">
-						<h3 class="b-animate b-from-top top-in   b-delay03 ">
-							<span>Lorem</span>	
-						</h3>
-					</div>
-				</a>
-
-
-			</div>
-			<div class="col-md-6">
-				<div class="col-md1 ">
-					<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="Upload/t2.jpg" alt="">
-						<div class="b-wrapper">
-							<h3 class="b-animate b-from-top top-in1   b-delay03 ">
-								<span>Lorem</span>	
-							</h3>
+			<h2>Sản phẩm bán chạy</h2>
+			<div class="grid-in">
+				<?php foreach($pro_hot as $item): ?>
+					<div class="col-md-3 bottom-cd simpleCart_shelfItem">
+						<div class="product-at ">
+							<a href="?controller=product&action=detail&id=<?php echo $item['MaSP']?>">
+								<img class="img-responsive thumbar" src="Upload/product/<?php echo $item['HinhAnh']?>" alt="">
+								<div class="pro-grid">
+									<span class="buy-in">Buy Now</span>
+								</div>
+							</a>
 						</div>
-					</a>
-
-				</div>
-				<div class="col-md2">
-					<div class="col-md-6 men1">
-						<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="Upload/t3.jpg" alt="">
-							<div class="b-wrapper">
-								<h3 class="b-animate b-from-top top-in2   b-delay03 ">
-									<span>Lorem</span>	
-								</h3>
-							</div>
+						<p class="tun"><?php echo $item['TenSP']?></p>
+						<a href="?controller=cart&action=addcart&id=<?php echo $item['MaSP']?>" class="item_add">
+							<p class="number item_price"><i> </i><?php echo formatPrice($item['DonGia'])?></p>
 						</a>
-
 					</div>
-					<div class="col-md-6 men2">
-						<a href="single.html" class="b-link-stripe b-animate-go  thickbox"><img class="img-responsive" src="Upload/t4.jpg" alt="">
-							<div class="b-wrapper">
-								<h3 class="b-animate b-from-top top-in2   b-delay03 ">
-									<span>Lorem</span>	
-								</h3>
-							</div>
-						</a>
-
-					</div>
-					<div class="clearfix"> </div>
-				</div>
+				<?php endforeach?>
+				
+				<div class="clearfix"> </div>
 			</div>
-			<div class="clearfix"> </div>
 		</div>
 	</div>
 	<!---->

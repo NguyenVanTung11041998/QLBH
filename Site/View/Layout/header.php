@@ -4,9 +4,10 @@
 		<div class="header-top">
 			<div class="container">
 				<div class="search">
-					<form>
-						<input type="text" value="Search " onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
-						<input type="submit" value="Go">
+					<form name="srmsearch" method="GET" action="?controller=search">
+						<input type="hidden" value="search" name="controller">
+						<input type="text" value="" name="name" placeholder="Tìm kiếm">
+						<input type="submit" name="submit" value="Tìm kiếm">
 					</form>
 				</div>
 				<div class="header-left">
@@ -16,7 +17,7 @@
 						<div class="cart box_1">
 							<a href="?controller=cart">
 								<i class="fa fa-shopping-cart"></i>
-								Giỏ hàng(<?php echo count($_SESSION['cart'])?>)
+								Giỏ hàng(<?php echo isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0?>)
 							</a>
 						</div>
 						<li>

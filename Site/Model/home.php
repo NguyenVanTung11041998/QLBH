@@ -20,5 +20,20 @@
             }
             return $data;
         }
+
+        public function fetch_sphot()
+        {
+            $sql = "SELECT *FROM sanpham ORDER BY SoLanMua DESC LIMIT 8";
+            $kq = $this->db->ExecuteQuery($sql);
+            $data = []; 
+            if($kq)
+            {
+                while($num = mysqli_fetch_assoc($kq))
+                {
+                    $data[] = $num;
+                }
+            }
+            return $data;
+        }
     }
 ?>

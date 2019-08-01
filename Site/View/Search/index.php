@@ -77,9 +77,9 @@
         </div>
         <div class="col-md-9 product1">
             <h3 class="title-main">
-                <a href="javascript:void(0)"><?php echo $loaiSP['TenLoai']?></a>
+                <a href="javascript:void(0)">Sản phẩm tìm kiếm</a>
             </h3>
-			<?php foreach($products as $item): ?>
+			<?php foreach($pro_search as $item): ?>
                 <div class="col-md-4 bottom-cd simpleCart_shelfItem">
 					<div class="product-at ">
 						<a href="?controller=Product&action=detail&id=<?php echo $item['MaSP']?>">
@@ -94,26 +94,28 @@
 						<p class="number item_price"><i> </i><?php echo formatPrice($item['DonGia'])?></p>
 					</a>
                 </div>
-			<?php endforeach ?> 
+			<?php endforeach ?>
         </div>
         <div class="clearfix"> </div>
-        <nav class="in">
+        <!-- <nav class="in">
             <ul class="pagination">
                 <li>
-                    <a href="?controller=category&action=pro_type&id=<?php echo $maLoaiSP?>&p=<?php echo $p-1?> " aria-label="Previous">
+                    <a href="?controller=search&p=<?php echo $p-1?> " aria-label="Previous">
                         <span aria-hidden="true">&laquo;</span>
                     </a>
                 </li>
                 <?php for($i=1; $i <= $sotrang; $i++): ?>
-                    <li class="<?php echo isset($_GET['p']) && $_GET['p']==$i ? 'active' : ''?>"><a href="?controller=category&action=pro_type&id=<?php echo $maLoaiSP?>&p=<?php echo $i?> "><?php echo $i?></a></li>
+                    <li class="<?php echo isset($_GET['p']) && $_GET['p']==$i ? 'active' : ''?>"><a href="?controller=search&p=<?php echo $i?> "><?php echo $i?></a></li>
                 <?php endfor ?>
                 <li>
-                    <a href="?controller=category&action=pro_type&id=<?php echo $maLoaiSP?>&p=<?php echo $p+1?> " aria-label="Next">
+                    <a href="?controller=search&p=<?php echo $p+1?> " aria-label="Next">
                         <span aria-hidden="true">&raquo;</span>
                     </a>
                 </li>
-            </ul>
-        </nav>
+            </ul>    
+        </nav> -->
     </div>
 </div>
+
+
 <!---->

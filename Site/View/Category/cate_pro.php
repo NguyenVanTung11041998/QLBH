@@ -67,14 +67,12 @@
                 <?php endforeach ?>
             </div>
             <div class=" per1">
-                <a href="single.html" >
-                    <img class="img-responsive" src="images/pro.jpg" alt="">
+                    <img class="img-responsive" src="Upload/pro.jpg" alt="">
                     <div class="six1">
                         <h4>DISCOUNT</h4>
                         <p>Up to</p>
                         <span>60%</span>
                     </div>
-                </a>
             </div>
         </div>
         <div class="col-md-9 product1">

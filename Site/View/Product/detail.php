@@ -44,74 +44,35 @@
                 });
             </script>
             <!---->
-            <div class="product-middle">
-                <div class="fit-top">
-                    <h6 class="shop-top">Lorem Ipsum</h6>
-                    <a href="#" class="shop-now">SHOP NOW</a>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-            <div class="sellers">
-                <div class="of-left-in">
-                    <h3 class="tag">Tags</h3>
-                </div>
-                <div class="tags">
-                    <ul>
-                        <li><a href="#">design</a></li>
-                        <li><a href="#">fashion</a></li>
-                        <li><a href="#">lorem</a></li>
-                        <li><a href="#">dress</a></li>
-                        <li><a href="#">fashion</a></li>
-                        <li><a href="#">dress</a></li>
-                        <li><a href="#">design</a></li>
-                        <li><a href="#">dress</a></li>
-                        <li><a href="#">design</a></li>
-                        <li><a href="#">fashion</a></li>
-                        <li><a href="#">lorem</a></li>
-                        <li><a href="#">dress</a></li>
-                        <div class="clearfix"> </div>
-                    </ul>
-                </div>
-            </div>
             <!---->
             <div class="product-bottom">
                 <div class="of-left-in">
-                    <h3 class="best">Best Sellers</h3>
+                    <h3 class="cate">
+						<i class="fa fa-list"></i>
+						Sản phẩm mới
+					</h3>
                 </div>
-                <div class="product-go">
-                    <div class=" fashion-grid">
-                        <a href="#"><img class="img-responsive " src="images/p1.jpg" alt=""></a>
+                <?php foreach($pro_new as $item): ?>
+                    <div class="product-go clearfix">
+                        <div class=" fashion-grid">
+                            <a href="?controller=product&action=detail&id=<?php echo $item['MaSP']?>"><img class="img-responsive " src="Upload/product/<?php echo $item['HinhAnh']?>" alt=""></a>
+                        </div>
+                        <div class=" fashion-grid1">
+                            <h6 class="best2">
+                                <a href="?controller=product&action=detail&id=<?php echo $item['MaSP']?>"><?php echo $item['TenSP']?></a>
+                            </h6>
+                            <span class=" price-in1"><?php echo Formatprice($item['DonGia'])?></span>
+                        </div>
                     </div>
-                    <div class=" fashion-grid1">
-                        <h6 class="best2"><a href="#" >Lorem ipsum dolor sit
-                            amet consectetuer  </a>
-                        </h6>
-                        <span class=" price-in1"> $40.00</span>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-                <div class="product-go">
-                    <div class=" fashion-grid">
-                        <a href="#"><img class="img-responsive " src="images/p2.jpg" alt=""></a>
-                    </div>
-                    <div class="fashion-grid1">
-                        <h6 class="best2"><a href="#" >Lorem ipsum dolor sit
-                            amet consectetuer </a>
-                        </h6>
-                        <span class=" price-in1"> $40.00</span>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
+                <?php endforeach ?>
             </div>
             <div class=" per1">
-                <a href="#" >
-                    <img class="img-responsive" src="images/pro.jpg" alt="">
+                    <img class="img-responsive" src="Upload/pro.jpg" alt="">
                     <div class="six1">
                         <h4>DISCOUNT</h4>
                         <p>Up to</p>
                         <span>60%</span>
                     </div>
-                </a>
             </div>
         </div>
         <div class="col-md-9 product-price1">

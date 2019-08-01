@@ -53,7 +53,7 @@
 								<td><?php echo $row['1']; ?></td>
 								<td><?php echo $row['2']; ?></td>
 								<td><?php echo $row['3']; ?> VND</td>
-								<td><?php echo ($row['4'] == 1 ? "Đã thanh toán" : "Chưa thanh toán");?></td>
+								<td><a href="admin.php?controller=bill&action=status&id=<?php echo $row['0']?>" class="btn <?php echo ($row['4'] == 1 ? 'btn-success' : 'btn-danger');?>"><?php echo ($row['4'] == 1 ? "Đã xử lý" : "Chưa xử lý");?></a></td>
 								<td>
 									<a href="admin.php?controller=bill-info&id=<?php echo $row['0']?>" class="btn btn-success">Xem chi tiết</a>
 								</td>

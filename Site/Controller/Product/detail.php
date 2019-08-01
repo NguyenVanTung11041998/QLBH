@@ -13,5 +13,7 @@
     $cate_id = intval($detail['MaLoaiSP']);
     $related_pro = $product->fetchSql($cate_id);
     //_debug($detail);
+    //lấy sản phâm mới
+    $pro_new = $product -> fetch_pro_new();
     $view = $controller.'/'.$action.'.php';
 ?>
