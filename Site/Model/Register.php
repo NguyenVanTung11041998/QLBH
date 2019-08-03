@@ -19,5 +19,19 @@
             $kq = $this->db->ExecuteQuery($sql);
             return mysqli_fetch_assoc($kq);
         }
+
+        public function fetch_taikhoan($id)
+        {
+            $sql = "SELECT *FROM khachhang WHERE ID = $id";
+            $kq = $this->db->ExecuteQuery($sql);
+            return mysqli_fetch_assoc($kq);
+        }
+
+        public function update($hoTen, $email, $soDT, $diaChi, $tenDN, $matKhau, $id)
+        {
+            $sql = "UPDATE khachhang SET HoTen= '$hoTen', Email='$email', SoDT='$soDT', DiaChi='$diaChi', TenDangNhap='$tenDN', MatKhau='$matKhau' WHERE ID = $id";
+            $kq = $this->db->ExecuteQuery($sql);
+            return $kq;
+        }
     }
 ?>

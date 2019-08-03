@@ -35,9 +35,9 @@
 						<th>STT</th>
 						<td>Mã khách hàng</td>
 						<td>Họ tên</td>
+						<td>Email</td>
 						<td>Địa chỉ</td>
 						<td>Số điện thoại</td>
-						<td>Email</td>
 					</tr>
 				</thead>
 				<tbody>

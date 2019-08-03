@@ -17,7 +17,7 @@
 			$listHoaDonChiTiet  = array();
 			while ($row = mysqli_fetch_row($bangDuLieu)) 
 			{
-				$hoaDonChiTiet = new HoaDonChiTiet($row['0'], $row['1'], $row['2'], $row['3']);
+				$hoaDonChiTiet = new HoaDonChiTiet($row['0'], $row['1'], $row['2'], $row['3'], $row['4']);
 				$listHoaDonChiTiet[] = $hoaDonChiTiet;
 			}
 			return $listHoaDonChiTiet;

@@ -28,8 +28,10 @@
 						$phieuNhap = $phieuNhapModel->LayPhieuNhapCuoiCung();
 						$maPN = $phieuNhap->GetMaPN();
 						$count = (int)$_COOKIE['RowCount'];
+						//echo "<script>console.log(".$count.")</script>";
 						for($i = 0; $i < $count; $i++)
 						{
+							echo "<script>console.log(".$_POST["MaSP_".$i].")</script>";
 							$maSP = $_POST["MaSP_".$i];
 							$soLuongNhap = $_POST["SoLuongNhap_".$i];
 							$donGiaNhap = $_POST["DonGiaNhap_".$i];

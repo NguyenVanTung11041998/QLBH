@@ -23,7 +23,7 @@
 						<li>
 							<a href="" style="padding-bottom:5px"><i class="fa fa-user"></i> Tài khoản <i class="fa fa-caret-down"></i></a>
 							<ul class="header-submenu">
-								<li style="margin-right:0"><a href=""><i class="fa fa-info-circle"></i>Thông tin</a></li>
+								<li style="margin-right:0"><a href="?controller=register&action=update"><i class="fa fa-info-circle"></i>Sửa thông tin</a></li>
 								<li><a href="?controller=logout"><i class="fa fa-share-square-o"></i>Đăng xuất</a></li>
 							</ul>
 						</li>

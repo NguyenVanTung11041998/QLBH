@@ -1,4 +1,5 @@
 <?php 
+    $view = $controller.'/'.$action.'.php';
     $cate = new category;
     //lay danh sach danh mục và loại sản phẩm
     $category = $cate->get_category('danhmuc');
@@ -31,5 +32,5 @@
     $sotrang = ceil($total/$row);
     //_debug($products);
 
-    $view = $controller.'/'.$action.'.php';
+   
 ?>
