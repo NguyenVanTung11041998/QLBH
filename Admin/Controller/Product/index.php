@@ -78,21 +78,21 @@
 				$donGia = (float)$_POST['txtDonGia'];
 				$moTa = $_POST['txtMoTa'];
 
-				if($_FILES['txtHinhAnh']['name'])
-				 	$hinhAnh = "Upload/".$_FILES['txtHinhAnh']['name'];
-				// if(isset($_FILES['txtHinhAnh']))
-				// {
-				// 	$file_name = $_FILES['txtHinhAnh']['name'];
-				// 	$file_tmp = $_FILES['txtHinhAnh']['tmp_name'];
-				// 	$file_type = $_FILES['txtHinhAnh']['type'];
-				// 	$file_error = $_FILES['txtHinhAnh']['error'];
+				// if($_FILES['txtHinhAnh']['name'])
+				//  	$hinhAnh = "Upload/".$_FILES['txtHinhAnh']['name'];
+				if(isset($_FILES['txtHinhAnh']['name']))
+				{
+					$file_name = $_FILES['txtHinhAnh']['name'];
+					$file_tmp = $_FILES['txtHinhAnh']['tmp_name'];
+					$file_type = $_FILES['txtHinhAnh']['type'];
+					$file_error = $_FILES['txtHinhAnh']['error'];
 
-				// 	if($file_error == 0)
-				// 	{
-				// 		$part = ROOT ."product/";
-				// 		$hinhAnh = $file_name;
-				// 	}
-				// } 
+					if($file_error == 0)
+					{
+						$part = ROOT ."product/";
+						$hinhAnh = $file_name;
+					}
+				} 
 				else
 					$hinhAnh = $sanPham->GetHinhAnh();
 				$soLuongTon = (int)$_POST['txtSoLuongTon'];

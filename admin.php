@@ -62,6 +62,11 @@
 			require_once('Admin/Controller/CouponInfo/index.php');
 			break;
 		}
+		case 'statistical':
+		{
+			require_once('Admin/Controller/Statistical/index.php');
+			break;
+		}
 		default:
 		{
 			require_once('Admin/Controller/Login/index.php');

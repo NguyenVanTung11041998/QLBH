@@ -52,7 +52,7 @@
 							<td><?php echo $value->GetMaNhaSanXuat(); ?></td>
 							<td><?php echo $value->GetTenNhaSanXuat(); ?></td>
 							<td><?php echo $value->GetThongTin(); ?></td>
-							<td><?php echo $value->GetLogo(); ?></td>
+							<td><img src="<?php echo $value->GetLogo(); ?>" style="width: 50px; height: 50px"></td>
 							<td>
 								<a href="admin.php?controller=producer&action=edit&id=<?php echo $value->GetMaNhaSanXuat();?>" class="btn btn-success"><i class="fa fa-edit"></i>Sửa</a>
 								<a href="admin.php?controller=producer&action=delete&id=<?php echo $value->GetMaNhaSanXuat();?>" class="btn btn-danger" onClick="return confirmAction()"><i class="fa fa-times"></i>Xóa</a>

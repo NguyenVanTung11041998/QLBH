@@ -124,7 +124,7 @@
 							<a href="admin.php?controller=bill"><i class="fa fa-database"></i> Quản lý đơn hàng</a>
 						</li>
 						<li>
-							<a href="#"><i class="fa fa-user"></i> Admin</a>
+							<a href="admin.php?controller=statistical"><i class="fa fa-user"></i> Thống kê</a>
 						</li>
 						<li>
 							<a href="admin.php?controller=producer"><i class="fa fa-fw fa-edit"></i> Nhà sản xuất</a>
