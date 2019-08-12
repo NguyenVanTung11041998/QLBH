@@ -78,6 +78,10 @@
 </div>
 
 <script type="text/javascript">
+    $(document).ready(() => {
+        document.cookie = "RowCount = " + 1;
+    });
+
     $('.btnThem').click(function() {
         var idCuoi = $('.tablePhieuNhapChiTiet').find("tr:last-child").attr("data-id");
         var i = parseInt(idCuoi) + 1;

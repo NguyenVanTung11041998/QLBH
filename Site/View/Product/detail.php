@@ -158,7 +158,7 @@
                                 <span class="women1">: CK09</span>
                             </li>
                         </ul> -->
-                    <a href="?controller=cart&action=addcart&id=<?php echo $detail['MaSP']?>" class="add-cart item_add">Thêm Vào Giỏ Hàng</a>
+                    <a href="?controller=cart&action=addcart&id=<?php echo $detail['MaSP']?>" class="add-cart item_add"><i class="fa fa-shopping-cart"></i>Thêm Vào Giỏ Hàng</a>
                 </div>
             </div>
             <div class="clearfix"> </div>

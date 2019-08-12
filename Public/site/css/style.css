@@ -2504,3 +2504,7 @@ p.text-danger {
 .pay{
 	float: right;
 }
+.fa-shopping-cart{
+	font-size: 16px;
+    margin-right: 5px;
+}

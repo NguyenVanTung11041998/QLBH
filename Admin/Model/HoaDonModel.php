@@ -41,7 +41,7 @@
 
 		public function fetch_hd($id)
 		{
-			$query = "SELECT *FROM hoandon WHERE MaHD = $id";
+			$query = "SELECT *FROM hoadon WHERE MaHD = $id";
 			$kq = $this->dbConfig->ExecuteQuery($query);
             return mysqli_fetch_assoc($kq);
 		}

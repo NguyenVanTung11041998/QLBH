@@ -1,3 +1,4 @@
+
 <?php
     $cart = new cart;
     $user = $cart->fetch_user($_SESSION['user_id']);

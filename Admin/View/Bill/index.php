@@ -18,7 +18,7 @@
 		<div class="form-group row">
 			<form action="" method="GET">
 				<div class="col-sm-4">
-                    <input id="datePicker" type="date" style="height: 2.5em; width: 100%" /> 
+                    <input id="datePicker" type="date" value="<?php echo date('Y-m-d'); ?>" style="height: 2.5em; width: 100%" /> 
                 </div>
                 <button type="button" id="search" class="btn btn-primary">Search</button>
 			</form>

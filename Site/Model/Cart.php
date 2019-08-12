@@ -20,7 +20,7 @@
         }
         public function insert_hoadon($maKH, $tong, $note)
         {
-            $sql = "INSERT INTO hoadon(MaKH, TongTien, GhiChu) VALUES($maKH, $tong, '$note')";
+            $sql = "INSERT INTO hoadon(NgayDat, MaKH, TongTien, GhiChu) VALUES(CURDATE(), $maKH, $tong, '$note')";
             $kq = $this->db->ExecuteQuery($sql);
             return mysqli_insert_id($this->db->connection());
         }
