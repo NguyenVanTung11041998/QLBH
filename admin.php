@@ -1,4 +1,5 @@
-<?php 
+<?php
+	session_start(); 
 	include "System/library/database.php";
 	if(isset($_GET['controller']))
 		$controller = $_GET['controller'];

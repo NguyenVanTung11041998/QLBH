@@ -18,6 +18,7 @@
 				setcookie('username', $taiKhoan, time() + 3600 * 24 * 30, '/', '', 0, 0);
 				setcookie('password', $matKhau, time() + 3600 * 24 * 30, '/', '', 0, 0);
 			}
+			$_SESSION['username'] = $taiKhoan;
 			echo '<script>alert("Đăng nhập thành công."); location.href="admin.php?controller=product";</script>';
 		}
 		else
