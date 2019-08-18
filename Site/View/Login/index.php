@@ -28,7 +28,7 @@
 					<?php endif ?>
 					<?php if(isset($_SESSION['error'])): ?>
 					<div class="alert alert-danger">
-						<strong style="color: red">Error!</strong> <?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
+						<?php echo $_SESSION['error']; unset($_SESSION['error']); ?>
 					</div>
 					<?php endif ?>
 					<input type="submit" value="Đăng nhập"/>  

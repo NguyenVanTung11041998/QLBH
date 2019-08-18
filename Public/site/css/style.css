@@ -1120,12 +1120,17 @@ a.item_add p.number i{
   vertical-align: middle;
   margin: 0 5px 0 0;
 }
-p.tun{
-	font-size:1em;
+a.tun{
+	font-size:15px;
 	  color: #949494;
   text-align: center;
   line-height: 1.3em;
   padding: 1em 0;
+  display: block;
+}
+a.tun:hover{
+	color: #EF5F21;
+	text-decoration: none;
 }
 
 .product-at{
@@ -1155,10 +1160,10 @@ p.tun{
 	padding: 0.5em 1.5em;
 	text-transform: uppercase;
 }
-.pro-grid span:hover{
+/* .pro-grid span:hover{
 	background:#fff;
 	color:#EF5F21;
-}
+} */
 /*--//product--*/
 /*--single--*/
  ul.star-footer li{
@@ -2332,7 +2337,7 @@ ul.callbacks_tabs.callbacks1_tabs {
 .bottom-cd {
   padding: 0 3px;
 }
-p.tun {
+a.tun {
   font-size: 0.8em;
 }
 a.item_add p.number {

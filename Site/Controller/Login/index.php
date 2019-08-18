@@ -24,7 +24,7 @@
 				echo "<script>alert('Đăng nhập thành công'); location.href = '?controller=Home'</script>";
 			}
 			else{
-				$_SESSION['error'] = "Đăng nhập thất bại";
+				$_SESSION['error'] = "Tên đăng nhập hoặc mật khẩu không chính xác!";
 			}
 		}
 	}

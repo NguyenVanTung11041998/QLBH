@@ -173,12 +173,12 @@
                         <div class="product-at ">
                             <a href="?controller=Product&action=detail&id=<?php echo $item['MaSP']?>">
                                 <img class="img-responsive img-related" src="Upload/product/<?php echo $item['HinhAnh']?>" alt="">
-                                <div class="pro-grid">
+                                <!-- <div class="pro-grid">
                                     <span class="buy-in">Buy Now</span>
-                                </div>
+                                </div> -->
                             </a>
                         </div>
-                        <p class="tun"><?php echo $item['TenSP']?></p>
+                        <a class="tun" href="?controller=Product&action=detail&id=<?php echo $item['MaSP']?>"><?php echo $item['TenSP']?></a>
                         <a href="?controller=cart&action=addcart&id=<?php echo $item['MaSP']?>" class="item_add">
                             <p class="number item_price"><i> </i><?php echo formatPrice($item['DonGia'])?></p>
                         </a>
